@@ -28,5 +28,6 @@ jobs:
 
       - name: Build gh-pages
         run: |
+          git remote set-url origin https://Kylesky:${{secrets.GITHUB_TOKEN}}@github.com/Kylesky/Limbus-Database
           npm install
           npm run deploy
