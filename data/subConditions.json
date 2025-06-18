@@ -1,0 +1,12 @@
+[
+    {
+        "id": "1",
+        "desc": "Target's SP below 0",
+        "text": "If target's SP is below 0"
+    },
+    {
+        "id": "2",
+        "desc": "End of turn",
+        "text": "At the end of the turn"
+    }
+]

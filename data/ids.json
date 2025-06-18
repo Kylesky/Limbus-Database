@@ -1,0 +1,126 @@
+[
+    {
+        "id": "1",
+        "sinner": "1",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "72+(2.48*L)",
+        "speed": [4, 8],
+        "defenseLevel": -2,
+        "staggerThresholds": [0.65, 0.35, 0.15],
+        "slashResist": 2,
+        "pierceResist": 0.5,
+        "bluntResist": 1,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Deflect",
+                "dmgType": "slash",
+                "sinAffinity": "gloom",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "mainCondition": {"id": "2"},
+                            "effects": [{"id": 1, "vars": {"num": 2, "status": {"id": 5}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "End-stop Stab",
+                "dmgType": "pierce",
+                "sinAffinity": "envy",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{}],
+                    [
+                        {
+                            "mainCondition": {"id": "2"},
+                            "effects": [
+                                {"id": 1, "vars": {"num": 2, "status": {"id": 5}}}, 
+                                {"id": 2, "vars": {"num": 1, "status": {"id": 5}}}
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Enjamb",
+                "dmgType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 6,
+                "coinPower": 2,
+                "numCoins": 3,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "mainCondition": {"id": "2"},
+                            "effects": [{"id": 1, "vars": {"num": 2, "status": {"id": 5}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "mainCondition": {"id": "2"},
+                            "effects": [{"id": 1, "vars": {"num": 1, "status": {"id": 5}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "mainCondition": {"id": "2"},
+                            "effects": [{"id": "5", "cond": {"id": "1"}, "vars": {"num": 1, "status": {"id": 17}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "defendType": "guard",
+                "basePower": 7,
+                "coinPower": 3,
+                "numCoins": 1,
+                "defenseLevel": -2
+            }
+        ],
+        "passives": [
+            {
+                "costType": "res",
+                "costSins": [{"num": 4, "sin": "gloom"}],
+                "effects": [
+                    {"id": "11", "vars": {"num": 1, "numTargets": 2, "status": {"id": "8"}}}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "costType": "owned",
+                "costSins": [{"num": 4, "sin": "gloom"}],
+                "effects": [
+                    {"id": 10, "cond": {"id": "2"}, "vars": {"num": 10, "numTargets": 1, "target": "ally with the least SP if they lost SP"}}
+                ]
+            }
+        ]
+    }
+]

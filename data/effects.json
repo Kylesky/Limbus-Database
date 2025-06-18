@@ -1,0 +1,79 @@
+[
+    {
+        "id": "1",
+        "desc": "Inflict Status",
+        "text": "Inflict ${num} ${status}",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status"}],
+        "tags": ["${status}"]
+    },
+    {
+        "id": "2",
+        "desc": "Inflict Status Count",
+        "text": "Inflict ${num} ${status} Count",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status", "isCount": true}],
+        "tags": ["${status}"]
+    },
+    {
+        "id": "3",
+        "desc": "Gain Status",
+        "text": "Inflict ${num} ${status}",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status"}],
+        "tags": ["self-${status}"]
+    },
+    {
+        "id": "4",
+        "desc": "Gain Status Count",
+        "text": "Inflict ${num} ${status} Count",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status", "isCount": true}],
+        "tags": ["self-${status}"]
+    },
+    {
+        "id": "5",
+        "desc": "Inflict Status Next Turn",
+        "text": "Inflict ${num} ${status} next turn",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status"}],
+        "tags": ["${status}"]
+    },
+    {
+        "id": "6",
+        "desc": "Inflict Status Count Next Turn",
+        "text": "Inflict ${num} ${status} Count next turn",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status", "isCount": true}],
+        "tags": ["${status}"]
+    },
+    {
+        "id": "7",
+        "desc": "Gain Status Next Turn",
+        "text": "Inflict ${num} ${status} next turn",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status"}],
+        "tags": ["self-${status}"]
+    },
+    {
+        "id": "8",
+        "desc": "Gain Status Count Next Turn",
+        "text": "Inflict ${num} ${status} Count next turn",
+        "vars": [{"name": "num", "type": "num"}, {"name": "status", "type": "status", "isCount": true}],
+        "tags": ["self-${status}"]
+    },
+    {
+        "id": "9",
+        "desc": "Heal HP",
+        "text": "Heal ${num} HP for ${numTargets} ${target}",
+        "vars": [{"name": "num", "type": "num"}, {"name": "numTargets", "type": "num"}, {"name": "target", "type": "string"}],
+        "tags": ["hp healing"]
+    },
+    {
+        "id": "10",
+        "desc": "Heal SP",
+        "text": "Heal ${num} SP for ${numTargets} ${target}",
+        "vars": [{"name": "num", "type": "num"}, {"name": "numTargets", "type": "num"}, {"name": "target", "type": "string"}],
+        "tags": ["sp healing"]
+    },
+    {
+        "id": "11",
+        "desc": "Apply to next allies on dashboard",
+        "text": "Apply ${num} ${status} to ${numTargets} placed after this unit on the Dashboard.",
+        "vars": [{"name": "num", "type": "num"}, {"name": "numTargets", "type": "num"}, {"name": "status", "type": "status"}],
+        "tags": ["${status}"]
+    }
+]
