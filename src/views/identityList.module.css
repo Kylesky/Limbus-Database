@@ -1,0 +1,51 @@
+table, th, td {
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+    border-collapse: collapse;
+    justify-items: center;
+}
+
+.wrapper {
+    height: 90vh;
+    display: block;
+    align-items: start;
+    justify-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.identitiesTable {
+    height: 90vh;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.tableHead {
+    width: 100%;
+}
+
+.tableBody {
+    width: 100%;
+}
+
+.identityRow {
+    height: 180px;
+}
+
+.portrait {
+    height: 10em;
+}
+
+.name {
+    text-decoration: underline;
+}
+
+.name:hover {
+    color: lightblue;
+    cursor: pointer;
+}
+
+.rarity {
+    height: 3em;
+}

@@ -1,0 +1,75 @@
+.skill {
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    position: relative;
+    padding: 0.5em;
+    text-align: left;
+}
+
+.skill > * {
+    margin-bottom: 0.5em;
+}
+
+.skillHeader {
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+}
+
+.skillTypeIconsContainer{
+    padding-right: 0.5em;
+}
+
+.skillTypeIcon {
+    width: 2em;
+    height: 2em;
+    transform: translateY(0.5em);
+}
+
+.skillLabel {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: grey;
+    font-weight: bold;
+    font-size: 2em;
+    opacity: 0.75;
+}
+
+.skillName {
+    border-radius: 5px;
+    padding: 5px;
+    color: #f0f0f0;
+    text-shadow: black 1px 1px 5px;
+    font-weight: bold;
+}
+
+.skillDetailsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.skillPower{
+    padding-right: 0.2em;
+}
+
+.skillDetailsIcon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.skillSummaryIcon
+
+.skillAtkWeight {
+    padding-left: 0.5em;
+    color: #FBC600;
+}
+
+.skillCoins > * {
+    margin-bottom: 0.3em;
+}
+
+.statusIconContainer > img {
+    width: 1.5em;
+    height: 1.5em;
+}

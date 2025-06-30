@@ -1,0 +1,64 @@
+.passive {
+    border-width: 2px;
+    border-style: solid;
+    border-color: grey;
+    display: inline-block;
+    position: relative;
+    padding: 0.5em;
+    text-align: left;
+    padding-top: 1em;
+}
+
+.passive > * {
+    margin-bottom: 0.5em;
+}
+
+.passiveHeader {
+    margin-bottom: 0.5em;
+}
+
+.passiveLabel {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: grey;
+    font-weight: bold;
+    font-size: 2em;
+    opacity: 0.75;
+}
+
+.passiveName {
+    border-radius: 5px;
+    background-color: gray;
+    padding: 5px;
+    color: #f0f0f0;
+    text-shadow: black 1px 1px 5px;
+    font-weight: bold;
+}
+
+.passiveCostContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.passiveCostIcon {
+    width: 2em;
+    height: 2em;
+}
+
+.passiveCostIconSummary {
+    width: 2em;
+    height: 2em;
+    transform: translateY(0.5em);
+}
+
+.passiveEffects {
+    display: flex;
+    flex-direction: column;
+}
+
+.passiveEffects > * {
+    margin-bottom: 1em;
+}

@@ -1,0 +1,148 @@
+{
+    "1": {
+        "id": "1",
+        "desc": "Target's SP below 0",
+        "text": "If target's SP is below 0,"
+    },
+    "2": {
+        "id": "2",
+        "desc": "End of turn",
+        "text": "At the end of the turn,"
+    },
+    "3": {
+        "id": "3",
+        "desc": "Target has n+ status",
+        "text": "If target has ${num}+ ${status},",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "4": {
+        "id": "4",
+        "desc": "Target has n+ status Count",
+        "text": "If target has ${num}+ ${status} Count,",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "5": {
+        "id": "5",
+        "desc": "Then",
+        "text": "then,"
+    },
+    "6": {
+        "id": "6",
+        "desc": "Unit has",
+        "text": "If this unit has ${status},",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "7": {
+        "id": "7",
+        "desc": "Unit does not have",
+        "text": "If this unit does not have ${status},",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "8": {
+        "id": "8",
+        "desc": "If this unit spent status due to this coin's effect",
+        "text": "If this unit spent ${status} due to this coin's effect,",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "9": {
+        "id": "9",
+        "desc": "When spending status",
+        "text": "When spending ${status},",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "10": {
+        "id": "10",
+        "desc": "If any of 2 statuses at value",
+        "text": "If ${status1} or ${status2} is at ${num},",
+        "vars": {"status1": {"type": "status"}, "status2": {"type": "status"}, "num": {"type": "num"}},
+        "tags": ["${status1}", "${status2}"]
+    },
+    "11": {
+        "id": "11",
+        "desc": "Always active",
+        "text": "Always active:"
+    },
+    "12": {
+        "id": "12",
+        "desc": "On kill or target has status",
+        "text": "If this attack killed the target, or if the target had ${num}+ ${status},",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["on kill", "${status}"]
+    },
+    "13": {
+        "id": "13",
+        "desc": "If this unit has shield",
+        "text": "If this unit has shield,",
+        "tags": ["shield"]
+    },
+    "14": {
+        "id": "14",
+        "desc": "Speed difference",
+        "text": "If this unit's Speed is faster than the target's by ${num} or more,",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["speed"]
+    },
+    "15": {
+        "id": "15",
+        "desc": "At speed",
+        "text": "At ${num}+ Speed,",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["speed"]
+    },
+    "16": {
+        "id": "16",
+        "desc": "Speed difference",
+        "text": "If this unit's Speed is faster than the target's,",
+        "tags": ["speed"]
+    },
+    "17": {
+        "id": "17",
+        "desc": "Target has either of two statuses",
+        "text": "If target has ${status1} or ${status2},",
+        "vars": {"status1": {"type": "status"}, "status2": {"type": "status"}},
+        "tags": ["${status1}", "${status2}"]
+    },
+    "18": {
+        "id": "18",
+        "desc": "At status",
+        "text": "At ${num}+ ${status},",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["speed", "${status}"]
+    },
+    "19": {
+        "id": "19",
+        "desc": "Unit has less of status count",
+        "text": "If this unit has less than ${num} ${status} Count,",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "20": {
+        "id": "20",
+        "desc": "Target took damage",
+        "text": "If target previously took damage this turn,"
+    },
+    "21": {
+        "id": "21",
+        "desc": "User took no damage",
+        "text": "If user took no damage last turn,"
+    },
+    "22": {
+        "id": "22",
+        "desc": "Target's hp above %",
+        "text": "If target's HP is above ${num}%,",
+        "vars": {"num": {"type": "num"}}
+    },
+    "23": {
+        "id": "23",
+        "desc": "Target has status",
+        "text": "If target has ${status},",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    }
+}

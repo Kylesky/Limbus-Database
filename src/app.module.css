@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.AppHeader {
+  background-color: black;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: grey;
+  gap: 2em;
+}
+
+.headerLink:hover {
+    color: white;
+}
+
+.AppContent {
+  background-color: #282828;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items:  center;
+  justify-content: center;
+  font-size: 100%;
+  color: white;
+}

@@ -1,0 +1,331 @@
+{
+    "1": {
+        "id": "1",
+        "img": "/assets/icons/statuses/Burn.png",
+        "name": "Burn",
+        "desc": "At the end of the turn, take fixed damage by the effect’s Potency. Then, reduce its Count by 1.",
+        "type": "debuff",
+        "withCount": true
+    },
+    "2": {
+        "id": "2",
+        "img": "/assets/icons/statuses/Bleed.png",
+        "name": "Bleed",
+        "desc": "When tossing an attack Coin, take fixed damage by the effect’s Potency. Then, reduce its Count by 1.",
+        "type": "debuff",
+        "withCount": true
+    },
+    "3": {
+        "id": "3",
+        "img": "/assets/icons/statuses/Tremor.png",
+        "name": "Tremor",
+        "desc": "When attacked by skills that trigger Tremor Burst, raise the Stagger Threshold by the effect’s Potency. At the end of the turn, reduce the Count by 1.",
+        "type": "debuff",
+        "withCount": true
+    },
+    "4": {
+        "id": "4",
+        "img": "/assets/icons/statuses/Rupture.png",
+        "name": "Rupture",
+        "desc": "When hit by an attack, take fixed damage by the effect’s Potency. Then, reduce its Count by 1.",
+        "type": "debuff",
+        "withCount": true
+    },
+    "5": {
+        "id": "5",
+        "img": "/assets/icons/statuses/Sinking.png",
+        "name": "Sinking",
+        "desc": "When hit by an attack, take fixed SP damage by the effect’s Potency. (Units with no Sanity take Gloom damage instead.) Then, reduce its Count by 1.",
+        "type": "debuff",
+        "withCount": true
+    },
+    "6": {
+        "id": "6",
+        "img": "/assets/icons/statuses/Poise.png",
+        "name": "Poise",
+        "desc": "On hit, gain a Potency-based chance to deal critical damage, reducing the Count by 1 if successful. At the end of the turn, reduce the Count by 1.",
+        "type": "buff",
+        "withCount": true
+    },
+    "7": {
+        "id": "7",
+        "img": "/assets/icons/statuses/Charge.png",
+        "name": "Charge",
+        "desc": "Resource used by certain skills for additional effects. Its Count can go up to 20. Count lowers by 1 at the end of each turn.",
+        "type": "buff",
+        "withCount": true
+    },
+    "8": {
+        "id": "8",
+        "img": "/assets/icons/statuses/Damage Up.png",
+        "name": "Damage Up",
+        "desc": "Deal more damage with skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "buff"
+    },
+    "9": {
+        "id": "9",
+        "img": "/assets/icons/statuses/Damage Down.png",
+        "name": "Damage Down",
+        "desc": "Deal less damage with skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "debuff"
+    },
+    "10": {
+        "id": "10",
+        "img": "/assets/icons/statuses/Offense Level Up.png",
+        "name": "Offense Level Up",
+        "desc": "Offense level increases based on the effect's Potency for one turn.",
+        "type": "buff"
+    },
+    "11": {
+        "id": "11",
+        "img": "/assets/icons/statuses/Offense Level Down.png",
+        "name": "Offense Level Down",
+        "desc": "Offense level decreases based on the effect's Potency for one turn.",
+        "type": "debuff"
+    },
+    "12": {
+        "id": "12",
+        "img": "/assets/icons/statuses/Defense Level Up.png",
+        "name": "Defense Level Up",
+        "desc": "Defense Level increases based on the effect's Potency for one turn.",
+        "type": "buff"
+    },
+    "13": {
+        "id": "13",
+        "img": "/assets/icons/statuses/Defense Level Down.png",
+        "name": "Defense Level Down",
+        "desc": "Defense Level decreases based on the effect's Potency for one turn.",
+        "type": "debuff"
+    },
+    "14": {
+        "id": "14",
+        "img": "/assets/icons/statuses/Haste.png",
+        "name": "Haste",
+        "desc": "Speed increases by the effect’s Count for one turn.",
+        "type": "buff"
+    },
+    "15": {
+        "id": "15",
+        "img": "/assets/icons/statuses/Bind.png",
+        "name": "Bind",
+        "desc": "Speed decreases by the effect’s Count for one turn.",
+        "type": "debuff"
+    },
+    "16": {
+        "id": "16",
+        "img": "/assets/icons/statuses/Protection.png",
+        "name": "Protection",
+        "desc": "Take less damage from skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "buff"
+    },
+    "17": {
+        "id": "17",
+        "img": "/assets/icons/statuses/Fragile.png",
+        "name": "Fragile",
+        "desc": "Take more damage from skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "debuff"
+    },
+    "18": {
+        "id": "18",
+        "img": "/assets/icons/statuses/Paralyze.png",
+        "name": "Paralyze",
+        "desc": "Fix the Power of Coins to 0 for one turn, with one Coin per the effect’s Count.",
+        "type": "debuff"
+    },
+    "19": {
+        "id": "19",
+        "img": "/assets/icons/statuses/Attack Power Up.png",
+        "name": "Attack Power Up",
+        "desc": "Attack skills gain final Power by the effect's Count for one turn.",
+        "type": "buff"
+    },
+    "20": {
+        "id": "20",
+        "img": "/assets/icons/statuses/Attack Power Down.png",
+        "name": "Attack Power Down",
+        "desc": "Attack skills lose final Power by the effect's Count for one turn.",
+        "type": "debuff"
+    },
+    "21": {
+        "id": "21",
+        "img": "/assets/icons/statuses/Defense Power Up.png",
+        "name": "Defense Power Up",
+        "desc": "Defense skills gain final Power by the effect's Count for one turn.",
+        "type": "buff"
+    },
+    "22": {
+        "id": "22",
+        "img": "/assets/icons/statuses/Defense Power Down.png",
+        "name": "Defense Power Down",
+        "desc": "Defense skills lose final Power by the effect's Count for one turn.",
+        "type": "debuff"
+    },
+    "23": {
+        "id": "23",
+        "img": "/assets/icons/statuses/Slash DMG Up.png",
+        "name": "Slash DMG Up",
+        "desc": "Deal more damage with Slash skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "buff"
+    },
+    "24": {
+        "id": "24",
+        "img": "/assets/icons/statuses/Pierce DMG Up.png",
+        "name": "Pierce DMG Up",
+        "desc": "Deal more damage with Pierce skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "buff"
+    },
+    "25": {
+        "id": "25",
+        "img": "/assets/icons/statuses/Blunt DMG Up.png",
+        "name": "Blunt DMG Up",
+        "desc": "Deal more damage with Blunt skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "buff"
+    },
+    "26": {
+        "id": "26",
+        "img": "/assets/icons/statuses/Slash Fragility.png",
+        "name": "Slash Fragility",
+        "desc": "Take more damage from Slash skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "debuff"
+    },
+    "27": {
+        "id": "27",
+        "img": "/assets/icons/statuses/Pierce Fragility.png",
+        "name": "Pierce Fragility",
+        "desc": "Take more damage from Pierce skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "debuff"
+    },
+    "28": {
+        "id": "28",
+        "img": "/assets/icons/statuses/Blunt Fragility.png",
+        "name": "Blunt Fragility",
+        "desc": "Take more damage from Blunt skills based on the effect’s Count for one turn. (Max 10)",
+        "type": "debuff"
+    },
+    "29": {
+        "id": "29",
+        "img": "/assets/icons/statuses/Ammo.png",
+        "name": "Ammo",
+        "desc": "Spent by certain skills. Some attacks cancel if lacking Ammo.",
+        "type": "neutral"
+    },
+    "1000": {
+        "id": "1000",
+        "img": "/assets/icons/statuses/Tigermark Round.png",
+        "name": "Tigermark Round",
+        "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent, gain Unrelenting Spirit - Shin [剛氣-心] instead of Unrelenting Spirit [剛氣] from this unit's Passive\n- Max Capacity: 12",
+        "type": "neutral",
+        "parent": "29"
+    },
+    "1001": {
+        "id": "1001",
+        "img": "/assets/icons/statuses/Tremor Burst.png",
+        "name": "Tremor Burst",
+        "desc": "Raise target's Stagger Treshold by Tremor Potency on target",
+        "type": "debuff",
+        "parent": "3"
+    },
+    "1002": {
+        "id": "1002",
+        "img": "/assets/icons/statuses/Savage Tigermark Round.png",
+        "name": "Savage Tigermark Round",
+        "desc": "- Unique Ammo\n- At 8+ (cumulative sum of Tigermark Rounds and Savage Tigermark Rounds spent, gain Unrelenting Spirit - Shin [剛氣-心] instead of Unrelenting Spirit [剛氣] from this unit's Passive\n- Activates the same way as Tigermark Round does\n- Max Capacity: 8",
+        "type": "neutral",
+        "parent": "29"
+    },
+    "1003": {
+        "id": "1003",
+        "img": "/assets/icons/statuses/Amplitude Conversion.png",
+        "name": "Amplitude Conversion",
+        "desc": "Converts Tremor or already converted Tremor into on target to a different type of Tremor.\nPotency and Count values do not change over the conversion.",
+        "type": "neutral",
+        "parent": "3"
+    },
+    "1004": {
+        "id": "1004",
+        "img": "/assets/icons/statuses/Tremor - Scorch.png",
+        "name": "Tremor - Scorch",
+        "desc": "- On Tremor Burst, take Wrath damage equal to (sum of Tremor Potency and Burn Potency / 2), and lose 1 Burn Count\n- When hit by skills that trigger Tremor Burst, raise this unit's Stagger Threshold by the effect's Potency.\n- Turn End: reduce the Count by 1\n(Interacts the same way as normal Tremor does to effects that raise or reduce Tremor Potency/Count)",
+        "type": "debuff",
+        "parent": "3"
+    },
+    "1005": {
+        "id": "1005",
+        "img": "/assets/icons/statuses/Unrelenting Spirit.png",
+        "name": "Unrelenting Spirit [剛氣]",
+        "desc": "- Min & Max Speed +1\n- If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 2.5)% damage (max 20%)\n- Inflict +1 more Tremor Potency and Tremor Count with this unit's Skills\n- If this unit has spent 8+ (sum of Tigermark Round and Savage Tigermark Round): at Turn End, convert this buff to Unrelenting Spirit - Shin [剛氣-心] next turn\n- Max Stack: 1",
+        "type": "buff"
+    },
+    "1006": {
+        "id": "1006",
+        "img": "/assets/icons/statuses/Unrelenting Spirit - Shin.png",
+        "name": "Unrelenting Spirit - Shin [剛氣-心]",
+        "desc": "- Min & Max Speed +3\n- If this unit's Speed is faster than the target's by 3 or more, deal +(Speed difference x 5)% damage (max 40%)\n- Inflict +2 more Tremor Potency and Tremor Count with this unit's Skills\n- Max Stack: 1",
+        "type": "buff"
+    },
+    "1007": {
+        "id": "1007",
+        "img": "/assets/icons/statuses/Overheat.png",
+        "name": "Overheat",
+        "desc": "- Loses this effect when this unit gains Savage Tigermark Round\n- Min & Max Speed +2\n- Base Attack Skills Lose (cumulative number of Tigermark & Savage Tigermark Rounds spent / 2) Clash Power (max 10); however, gain the following effects(cumulative):\n· 8+ Rounds spent: Gain 1 Protection for every 10% missing HP on self at Turn Start (max 5)\n· 14+ Rounds spent: On Clash Lose, Unbreakable Coins of this unit's Base Attack Skills deal +(75 + missing HP percentage on self)% damage (max 150%)\n· 20+ Rounds Spent: Deal +(HP percentage difference)% damage against targets with higher remaining HP percentage than this unit (max 50%; except E.G.O Skills)",
+        "type": "buff"
+    },
+    "1008": {
+        "id": "1008",
+        "img": "/assets/icons/statuses/Unbreakable Coin.png",
+        "name": "Unbreakable Coin",
+        "desc": "- This coin does not break upon Clash Lose.\n- If an Attack Skill has this Coin, attack with this Coin after getting hit.\n- Upon Clash Lose, fix the Coin Power of the unbroken Coin to 1.",
+        "type": "neutral"
+    },
+    "1010": {
+        "id": "1010",
+        "img": "/assets/icons/statuses/Tianjiu Star_s Blade.png",
+        "name": "Tianjiu Star's Blade",
+        "desc": "- Max Stack: 20\n- At 10+ Stack: at Turn End, gain 1 Haste next turn\n- Used for certain Skills",
+        "type": "neutral"
+    },
+    "1011": {
+        "id": "1011",
+        "img": "/assets/icons/statuses/Deathrite-Haste.png",
+        "name": "Deathrite【Haste】",
+        "desc": "- Base Stack: 3\n- When getting Rupture triggered by getting hit by an Attack Skill from a target with 10+ Speed, lose 1 Stack and gain +1 Rupture Count\n- At 0 Stack, take Gluttony damage equal to Rupture Potency on self; then, this effect expires\n※ Cannot gain additional Stacks of this effect while it is already active",
+        "type": "debuff",
+        "parent": "4"
+    },
+    "1012": {
+        "id": "1012",
+        "img": "/assets/icons/statuses/Deathrite-Fissure.png",
+        "name": "Deathrite【Fissure】",
+        "desc": "- Base Stack: 3\n- When getting Rupture triggered while this unit has Deathrite, lose 1 Stack, and gain 1 Bind next turn\n· When this effect activates, if this unit is to gain 3 or more Bind next turn, lose 2 Stacks instead of gaining Bind\n- At 0 Stack, take Gluttony damage equal to Rupture Potency on self\n※ Cannot gain additional Stacks of this effect while it is already active.",
+        "type": "debuff",
+        "parent": "4"
+    },
+    "1013": {
+        "id": "1013",
+        "img": "/assets/icons/statuses/Assist Defense.png",
+        "name": "Assist Defense",
+        "desc": "- Max Stack: 3\n- When an ally is about to take an Unopposed Attack from an enemy, consume 1 Stack to redirect the enemy's targeting to self; then, use the unique Skill that activates for Assist Defense\n- When there are multiple allies with Assist Defense Stacks, the ally with the highest Stack has the highest activation priority\n- Does not activate for allies who equipped Defense Skills\n- Expires at Turn End",
+        "type": "neutral"
+    },
+    "1014": {
+        "id": "1014",
+        "img": "/assets/icons/statuses/Strider-Mao.png",
+        "name": "Strider【Mao】",
+        "desc": "Max Stack: 3\nTurn End: gain 5 Haste next turn\nReduced by 1 at Turn End",
+        "type": "buff"
+    },
+    "1015": {
+        "id": "1015",
+        "img": "/assets/icons/statuses/Clashable Guard.png",
+        "name": "Clashable Guard",
+        "desc": "- On Clash Win: raise the target's Stagger Threshold by this unit's final Clash Power.\n- On Clash Lose: when hit, reduce the attacker's final Skill Power by this unit's Final Power.\n- On Clash Lose: does not gain Final Power from the following sources: Resonance and the Level disparity against the Attack Skill",
+        "type": "neutral"
+    },
+    "1016": {
+        "id": "1016",
+        "img": "/assets/icons/statuses/Mark of Decay.png",
+        "name": "Mark of Decay",
+        "desc": "- Max Stack: 1\n- Take +10% damage from Gluttony Skills\n- Take +10% damage from Deathrite\n- Removed at Turn End",
+        "type": "debuff"
+    }
+}

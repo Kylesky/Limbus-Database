@@ -1,0 +1,93 @@
+{
+    "1": {
+        "id": "1",
+        "text": "[On Use]",
+        "color": "darkturquoise",
+        "conditional": false
+    },
+    "2": {
+        "id": "2",
+        "text": "[On Hit]",
+        "color": "lightgreen",
+        "conditional": false
+    },
+    "3": {
+        "id": "3",
+        "text": "[Combat Start]",
+        "color": "lightgreen",
+        "conditional": false
+    },
+    "4": {
+        "id": "4",
+        "text": "[Before Attack]",
+        "color": "green",
+        "conditional": false
+    },
+    "5": {
+        "id": "5",
+        "text": "[After Attack]",
+        "color": "lightgreen",
+        "conditional": false
+    },
+    "6": {
+        "id": "6",
+        "text": "[Clash Win]",
+        "color": "orange",
+        "conditional": true
+    },
+    "7": {
+        "id": "7",
+        "text": "[Clash Lose]",
+        "color": "red",
+        "conditional": true
+    },
+    "8": {
+        "id": "8",
+        "text": "[Heads Hit]",
+        "color": "greenyellow",
+        "conditional": true
+    },
+    "9": {
+        "id": "9",
+        "text": "[Tails Hit]",
+        "conditional": true
+    },
+    "10": {
+        "id": "10",
+        "text": "[On Crit]",
+        "color": "green",
+        "conditional": true
+    },
+    "11": {
+        "id": "11",
+        "text": "[On Evade]",
+        "color": "green",
+        "conditional": true
+    },
+    "12": {
+        "id": "12",
+        "text": "[Before Use]",
+        "color": "lightgreen",
+        "conditional": false
+    },
+    "13": {
+        "id": "13",
+        "text": "[Clashable Counter]",
+        "color": "orange",
+        "tags": ["clashable counter"],
+        "conditional": false
+    },
+    "14": {
+        "id": "14",
+        "text": "[Before Getting Hit]",
+        "color": "lightgreen",
+        "conditional": false
+    },
+    "15": {
+        "id": "15",
+        "text": "[Reuse - On Hit]",
+        "color": "lightgreen",
+        "conditional": true,
+        "reuse": true
+    }
+}

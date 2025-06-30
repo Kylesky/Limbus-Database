@@ -1,0 +1,75 @@
+th, td {
+    border-top: 1px grey solid;
+    border-bottom: 1px grey solid;
+    border-left: 1px rgba(64, 64, 64, 64) dashed;
+    border-right: 1px rgba(64, 64, 64, 64) dashed;
+}
+
+.teamBuilding {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-items: center;
+    width: 80vw;
+    height: 90vh;
+}
+
+.idSelection {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.sinnerPanel {
+    width: 100%;
+    height: 100%;
+    border: 1px grey solid;
+}
+
+.portrait {
+    width: 98%;
+}
+
+.portrait:hover {
+    cursor: pointer;
+    filter: brightness(120%);
+}
+
+.deployedPortrait {
+    width: 98%;
+    filter: brightness(50%);
+}
+
+.deployedPortrait:hover {
+    cursor: pointer;
+    filter: brightness(70%);
+}
+
+.dropdown {
+    color: grey;
+}
+
+.summary {
+    width: 100%;
+}
+
+.summaryOptions {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.summaryTable {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+.summaryPortrait {
+    height: 4em;
+}

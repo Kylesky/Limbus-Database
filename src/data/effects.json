@@ -1,0 +1,643 @@
+{
+    "1": {
+        "id": "1",
+        "desc": "Inflict Status",
+        "text": "inflict ${num} ${status}",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num}"]
+    },
+    "2": {
+        "id": "2",
+        "desc": "Inflict Status Count",
+        "text": "inflict +${num} ${status} Count",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status", "isCount": true}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num} count"]
+    },
+    "3":{
+        "id": "3",
+        "desc": "Gain Status",
+        "text": "gain ${num} ${status}",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["self-${status}"],
+        "summaryEffects": ["status ${status} ${num} self"]
+    },
+    "4": {
+        "id": "4",
+        "desc": "Gain Status Count",
+        "text": "gain +${num} ${status} Count",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status", "isCount": true}},
+        "tags": ["self-${status}"],
+        "summaryEffects": ["status ${status} ${num} self count"]
+    },
+    "5":{
+        "id": "5",
+        "desc": "Inflict Status Next Turn",
+        "text": "inflict ${num} ${status} next turn",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num}"]
+    },
+    "6":{
+        "id": "6",
+        "desc": "Inflict Status Count Next Turn",
+        "text": "inflict +${num} ${status} Count next turn",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status", "isCount": true}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num} count"]
+    },
+    "7": {
+        "id": "7",
+        "desc": "Gain Status Next Turn",
+        "text": "gain ${num} ${status} next turn",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["self-${status}"],
+        "summaryEffects": ["status ${status} ${num} self"]
+    },
+    "8": {
+        "id": "8",
+        "desc": "Gain Status Count Next Turn",
+        "text": "gain +${num} ${status} Count next turn",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status", "isCount": true}},
+        "tags": ["self-${status}"],
+        "summaryEffects": ["status ${status} ${num} self count"]
+    },
+    "9": {
+        "id": "9",
+        "desc": "Heal HP",
+        "text": "heal ${num} HP for ${numTargets} ${target}",
+        "vars": {"num": {"type": "num"}, "numTargets": {"type": "num"}, "target": {"type": "string"}},
+        "tags": ["hp healing"],
+        "summaryEffects": ["hp ${num} ${numTargets}"]
+    },
+    "10": {
+        "id": "10",
+        "desc": "Heal SP",
+        "text": "heal ${num} SP for ${numTargets} ${target}",
+        "vars": {"num": {"type": "num"}, "numTargets": {"type": "num"}, "target": {"type": "string"}},
+        "tags": ["sp healing"],
+        "summaryEffects": ["sp ${num} ${numTargets}"]
+    },
+    "11": {
+        "id": "11",
+        "desc": "Apply to next allies on dashboard",
+        "text": "apply ${num} ${status} to ${numTargets} placed after this unit on the Dashboard.",
+        "vars": {"num": {"type": "num"}, "numTargets": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["statusMultiple ${status} ${num} ${numTargets}"]
+    },
+    "12": {
+        "id": "12",
+        "desc": "Coin power on statuses on target",
+        "text": "Coin Power +${num} for every ${step} ${status} on target (max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["${status}", "coin power"],
+        "summaryEffects": ["coinPower ${max}"],
+        "isCond": true 
+    },
+    "13": {
+        "id": "13",
+        "desc": "Damage% on statuses on target",
+        "text": "Deal +${num}% damage for every ${step} ${status} on target (max ${max}%)",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["${status}", "increased damage"],
+        "summaryEffects": ["damage ${max}%"],
+        "isCond": true 
+    },
+    "14": {
+        "id": "14",
+        "desc": "Heal 1 more ally",
+        "text": "heal 1 more ally",
+        "summaryEffects": ["statusRetrigger 1"]
+    },
+    "15": {
+        "id": "15",
+        "desc": "Inflict affinty damage based on status",
+        "text": "Inflict ${affinity} Affinity damage equal to ${status} Potency on target (max ${max})",
+        "vars": {"affinity": {"type": "string"}, "status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["${affinity} damage", "${status}"],
+        "summaryEffects": ["damage ${max}"],
+        "isCond": true
+    },
+    "16": {
+        "id": "16",
+        "desc": "Reduce status",
+        "text": "Reduce Target's ${status} Count by ${num}",
+        "vars": {"status": {"type": "status"}, "num": {"type": "num"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} -${num} count"]
+    },
+    "17": {
+        "id": "17",
+        "desc": "Gain shield based on status",
+        "text": "Gain Shield equal to ${status} on target (max ${max}, once per turn)",
+        "vars": {"status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["shield", "${status}"]
+    },
+    "18": {
+        "id": "18",
+        "desc": "Inflict additional Status",
+        "text": "inflict ${num} additional ${status}",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num}"]
+    },
+    "19": {
+        "id": "19",
+        "desc": "Plus % damage with target",
+        "text": "Deal +${num}% damage to ${target}.",
+        "vars": {"num": {"type": "num"}, "target": {"type": "string"}},
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage ${num}%"]
+    },
+    "20": {
+        "id": "20",
+        "desc": "Coin Power",
+        "text": "Coin Power +${num}",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["coin power"],
+        "summaryEffects": ["coinPower ${num}"]
+    },
+    "21": {
+        "id": "21",
+        "desc": "Reuse coin once",
+        "text": "Reuse Coin once (once per Skill)",
+        "tags": ["reuse coin"],
+        "summaryEffects": ["reuseCoin 1"]
+    },
+    "22": {
+        "id": "22",
+        "desc": "Damage on speed difference x self status",
+        "text": "deal +(Speed difference x ${status} on self)% damage (max ${max}%)",
+        "vars": {"status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["increased damage", "${status}"],
+        "summaryEffects": ["damage ${max}%"]
+    },
+    "23": {
+        "id": "23",
+        "desc": "Damage on speed difference x target status",
+        "text": "deal +(Speed difference x ${status} Potency on target)% damage (max ${max}%)",
+        "vars": {"status": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["increased damage", "${status}"],
+        "summaryEffects": ["damage ${max}%"]
+    },
+    "24": {
+        "id": "24",
+        "desc": "Coin Power based on speed difference",
+        "text": "gain Coin Power based on speed difference (Coin Power +${num} for every ${step} Speed difference; max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "max": {"type": "num"}},
+        "tags": ["coin power"],
+        "summaryEffects": ["coinPower ${max}"]
+    },
+    "25": {
+        "id": "25",
+        "desc": "Inflict Status (no num)",
+        "text": "inflict ${status}",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["statusTrigger ${status} 1"]
+    },
+    "26": {
+        "id": "26",
+        "desc": "Raise status count",
+        "text": "raise ${status} Count up to ${num}",
+        "vars": {"status": {"type": "status"}, "num": {"type": "num"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num} self count"]
+    },
+    "27": {
+        "id": "27",
+        "desc": "Consume status",
+        "text": "consume ${num} ${status}",
+        "vars": {"status": {"type": "status"}, "num": {"type": "num"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} -${num} self"]
+    },
+    "28": {
+        "id": "28",
+        "desc": "Base Power based on speed difference",
+        "text": "gain Base Power based on speed difference (Base Power +${num} for every ${step} Speed difference; max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "max": {"type": "num"}},
+        "tags": ["base power"],
+        "summaryEffects": ["power ${max}"]
+    },
+    "29": {
+        "id": "29",
+        "desc": "Offense level from hp lost",
+        "text": "This Skill gains +${num} Offense Level for every ${step}% HP this unit has cumulatively lost in this Encounter (max ${max}; based on max HP at the time of activation)",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "max": {"type": "num"}},
+        "tags": ["offense level"],
+        "summaryEffects": ["offenseLevel ${max}"]
+    },
+    "30": {
+        "id": "30",
+        "desc": "status",
+        "text": "${status}",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "31": {
+        "id": "31",
+        "desc": "Exclusive skill",
+        "text": "Exclusive skill for ${status}",
+        "vars": {"status": {"type": "status"}},
+        "tags": ["${status}"]
+    },
+    "32": {
+        "id": "32",
+        "desc": "Cannot be staggered",
+        "text": "Cannot be staggered by damage until this Skill ends",
+        "tags": ["stagger protection"]
+    },
+    "33": {
+        "id": "33",
+        "desc": "Damage based on speed difference",
+        "text": "deal +${num}% more damage for every ${step} Speed difference (max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "max": {"type": "num"}},
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage ${max}%"]
+    },
+    "34": {
+        "id": "34",
+        "desc": "Defense level from hp lost",
+        "text": "This Skill gains +${num} Defense Level for every ${step}% HP this unit has cumulatively lost in this Encounter (max ${max}; based on max HP at the time of activation)",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "max": {"type": "num"}},
+        "tags": ["defense level"],
+        "summaryEffects": ["defenseLevel ${max}"]
+    },
+    "35": {
+        "id": "35",
+        "desc": "Skills plus % damage on event",
+        "text": "Skills deal +${num}% damage in ${target}.",
+        "vars": {"num": {"type": "num"}, "target": {"type": "string"}},
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage ${num}%"]
+    },
+    "1000": {
+        "id": "1000",
+        "desc": "Final Power on sum of two statuses on main target",
+        "text": "Final Power +${num} for every ${step} (sum of ${status1} and ${status2} on the main target) (max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "status1": {"type": "status"}, "status2": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["${status1}", "${status2}", "final power"],
+        "summaryEffects": ["power ${max}"],
+        "isCond": true
+    },
+    "1001": {
+        "id": "1001",
+        "desc": "Spend status",
+        "text": "spend ${num} ${status}",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} -${num} self"]
+    },
+    "1002": {
+        "id": "1002",
+        "desc": "Trigger Tremor Burst, reduce Tremor Count on target",
+        "text": "trigger ${burst}; then, reduce target's ${tremor} Count by ${num}",
+        "vars": {"burst": {"type": "status", "fixed": {"id": "1001"}}, "tremor": {"type": "status", "fixed": {"id": "3"}}, "num": {"type": "num"}},
+        "tags": ["${burst}", "${tremor}"],
+        "summaryEffects": ["statusTrigger ${burst} 1", "status ${tremor} -${num} count"]
+    },
+    "1003": {
+        "id": "1003",
+        "desc": "Trigger Tremor Burst",
+        "text": "trigger ${burst}",
+        "vars": {"burst": {"type": "status", "fixed": {"id": "1001"}}},
+        "tags": ["${burst}"],
+        "summaryEffects": ["statusTrigger ${burst} 1"]
+    },
+    "1004": {
+        "id": "1004",
+        "desc": "Activate skill instead",
+        "text": "activate '${skill}' instead",
+        "vars": {"skill": {"type": "string"}, "label": {"type": "string"}},
+        "tags": ["skill replace"],
+        "summaryEffects": ["skillReplace ${label}"]
+    },
+    "1005": {
+        "id": "1005",
+        "desc": "Cancel activation",
+        "text": "cancel activation"
+    },
+    "1006": {
+        "id": "1006",
+        "desc": "Deal plus percent damage",
+        "text": "deal +${num}% damage",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage ${num}%"]
+    },
+    "1007": {
+        "id": "1007",
+        "desc": "Trigger status into status",
+        "text": "trigger ${status1} into ${status2}",
+        "vars": {"status1": {"type": "status"}, "status2": {"type": "status"}},
+        "tags": ["${status1}", "${status2}"],
+        "summaryEffects": ["statusTrigger ${status1}", "statusTrigger ${status2}"]
+    },
+    "1008": {
+        "id": "1008",
+        "desc": "Repeat effect",
+        "text": "activate the above effect ${num} more times",
+        "vars": {"num": {"type": "num"}},
+        "summaryEffects": ["statusRetrigger ${num}"]
+    },
+    "1009": {
+        "id": "1009",
+        "desc": "Coin power on sum of two statuses on main target",
+        "text": "Coin Power +${num} for every ${step} (sum of ${status1} and ${status2} on the main target) (max ${max})",
+        "vars": {"num": {"type": "num"}, "step": {"type": "num"}, "status1": {"type": "status"}, "status2": {"type": "status"}, "max": {"type": "num"}},
+        "tags": ["${status1}", "${status2}", "coin power"],
+        "summaryEffects": ["coinPower ${max}"],
+        "isCond": true 
+    },
+    "1010": {
+        "id": "1010",
+        "desc": "Clash power",
+        "text": "Clash Power +${num}",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["clash power"],
+        "summaryEffects": ["clashPower ${num}"]
+    },
+    "1011": {
+        "id": "1011",
+        "desc": "begin Encounters",
+        "text": "begin Encounters with ${num} ${status}",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num} self"]
+    },
+    "1012": {
+        "id": "1012",
+        "desc": "Chachihu - no ammo",
+        "text": "When flipping a coin that consumes ${TR} or ${STR}: while not having those 'Unique Ammo' does not cancel this unit's attacks, the Coin's On Hit \"inflict ${burn}\" and \"inflict ${burn} Count\" effects do not activate",
+        "vars": {"TR": {"type": "status", "fixed": {"id": "1000"}}, "STR": {"type": "status", "fixed": {"id": "1002"}}, "burn": {"type": "status", "fixed": {"id": "1"}}},
+        "tags": ["${burn}"]
+    },
+    "1013": {
+        "id": "1013",
+        "desc": "Inflict Status (turn max)",
+        "text": "inflict ${num} ${status} (${times} times per turn)",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status"}, "times": {"type": "num"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num}"]
+    },
+    "1014": {
+        "id": "1014",
+        "desc": "Inflict Status Count (turn max)",
+        "text": "inflict +${num} ${status} Count (${times} times per turn)",
+        "vars": {"num": {"type": "num"}, "status": {"type": "status", "isCount": true}, "times": {"type": "num"}},
+        "tags": ["${status}"],
+        "summaryEffects": ["status ${status} ${num} count"]
+    },
+    "1015": {
+        "id": "1015",
+        "desc": "Chachihu - ammo change",
+        "text": "If this unit equipped Defense Skills for the first time in this Encounter, or if this unit spent all of his ${TR}, or if this unit is Staggered: at the end of that turn, reload 8 ${STR} and gain 1 ${US} (once per Encounter)\n- If this effect activates while this unit is Staggered, recover from Stagger (unless it's a forced Stagger)\n- Remove all ${TR} if this unit has any leftover ${TR}\n- At 8+ (sum of ${TR} and ${STR} spent), convert ${US} to ${USS}",
+        "vars": {
+            "TR": {"type": "status", "fixed": {"id": "1000"}},
+            "STR": {"type": "status", "fixed": {"id": "1002"}},
+            "US": {"type": "status", "fixed": {"id": "1005"}},
+            "USS": {"type": "status", "fixed": {"id": "1006"}},
+            "tremor": {"type": "status", "fixed": {"id": "3"}}
+        },
+        "tags": ["reload", "stagger recovery"],
+        "summaryEffects": ["status ${STR} 8 self", "status ${US} 1 self", "status ${USS} 1 self", "statusBonus ${tremor} 1", "speed 3", "damage 40%", "statusBonus ${tremor} 1 count"]
+    },
+    "1016": {
+        "id": "1016",
+        "desc": "Chachihu - last ammo",
+        "text": "When this unit uses a Base Attack Skill that spends the final Round of ${STR}...\n- Gain Atk Weight +2 before attacking\n- Gain 1 ${overheat} next turn",
+        "vars": {"STR": {"type": "status", "fixed": {"id": "1002"}}, "overheat": {"type": "status", "fixed": {"id": "1007"}}},
+        "summaryEffects": ["atkweight 2", "status ${overheat} 1 self"]
+    },
+    "1017": {
+        "id": "1017",
+        "desc": "Tiantui Star's Blade - Tigermark Rounds",
+        "text": "When this unit has ${TR}:\n- At 1+ ${TR}, convert all Coins of 'Tanglecleaver' into ${unbreakable}\n- Skill Coins that spend ${TR} gain +1 Power and deal +10% damage (activates only as long as the Coin has Rounds left to spend)",
+        "vars": {"TR": {"type": "status", "fixed": {"id": "1000"}}, "unbreakable": {"type": "status", "fixed": {"id": "1008"}}},
+        "tags": ["${unbreakable}"]
+    },
+    "1018": {
+        "id": "1018",
+        "desc": "Tiantui Star's Blade - Savage Tigermark Rounds",
+        "text": "When this unit has ${STR}:\n- At 1+ ${STR}, convert all Coins of this unit's Base Attack Skills to ${unbreakable}\n- At 0 ${STR}, convert all Coins of this unit's Base Attack Skills that spend 'Unique Ammo' to ${unbreakable}\n- Skill Coins that spend ${TR} gain +2 Power, deal +30% damage, and inflict +2 more ${burn} Potency and ${burn} Count On Hit (activates only as long as the Coin has Rounds left to spend)",
+        "vars": {
+            "TR": {"type": "status", "fixed": {"id": "1000"}},
+            "STR": {"type": "status", "fixed": {"id": "1002"}},
+            "unbreakable": {"type": "status", "fixed": {"id": "1008"}},
+            "burn": {"type": "status", "fixed": {"id": "1"}}
+        },
+        "tags": ["${unbreakable}", "${burn}"],
+        "summaryEffects": ["statusBonus ${burn} 2", "statusBonus ${burn} 2 count", "power 2", "damage 30%"]
+    },
+    "1019": {
+        "id": "1019",
+        "desc": "Savage Tiger's Lungs",
+        "text": "When 1 ally with the fastest Speed uses a Skill that spends ${ammo}, if their Speed is faster than the target's by 3 or more, deal +(Speed difference x 3)% more damage (max 15%)\n(This effect does not activate if the unit lacks the ${ammo} buff entirely. However, it will activate if they have the ${ammo} buff, even at 0 rounds left.)",
+        "vars": {"ammo": {"type": "status", "fixed": {"id": "29"}}},
+        "tags": ["${ammo}"],
+        "summaryEffects": ["damage 15%"]
+    },
+    "1020": {
+        "id": "1020",
+        "desc": "Inner Ardor",
+        "text": "Turn End: heal 1 ally with the least SP by (5 + highest Reson.) (max 10) (excludes: self and Panicked or E.G.O Corroded allies)\n- If the said ally has Base Skills that inflict ${burn} Potency or Count, heal 5 additional SP to them\n- At 4+ Wrath Reson., heal 1 additional ally",
+        "vars": {"burn": {"type": "status", "fixed": {"id": "1"}}},
+        "tags": ["${burn}", "sp healing"],
+        "summaryEffects": ["sp 15 2"]
+    },
+    "1021": {
+        "id": "1021",
+        "desc": "Liu Defensive Square",
+        "text": "For 2 allies with the least SP: if they lost SP this turn, heal 5 SP at Turn End\n- If the said allies have Base Skills that inflict ${burn} Potency or Count, heal 5~10 SP instead",
+        "vars": {"burn": {"type": "status", "fixed": {"id": "1"}}},
+        "tags": ["${burn}", "sp healing"],
+        "summaryEffects": ["sp 10 2"]
+    },
+    "1022": {
+        "id": "1022",
+        "desc": "Keen Observation",
+        "text": "1 ally with the highest Max HP inflicts 2 ${offdown} with attacks at a 25% chance.",
+        "vars": {"offdown": {"type": "status", "fixed": {"id": "11"}}},
+        "tags": ["${offdown}"],
+        "summaryEffects": ["status ${offdown} 2"]
+    },
+    "1023": {
+        "id": "1023",
+        "desc": "Tianjiu Star",
+        "text": "When ${fissure} Stack drops to 0 and expires, gain ${mark}",
+        "vars": {"fissure": {"type": "status", "fixed": {"id": "1012"}}, "mark": {"type": "status", "fixed": {"id": "1016"}}},
+        "tags": ["${fissure}", "${mark}"],
+        "summaryEffects": ["status ${mark} 1"]
+    },
+    "1024": {
+        "id": "1024",
+        "desc": "Mao Branch Adept",
+        "text": "Gain 1 ${TSB} every time an ally triggers a Deathrite effect (5 times per turn)\n- If this unit triggered a Deathrite effect, gain 1 additional ${TSB}\nWhen activating the ${assist} effect, gain 5 ${TSB}",
+        "vars": {"TSB": {"type": "status", "fixed": {"id": "1010"}}, "assist": {"type": "status", "fixed": {"id": "1013"}}},
+        "tags": ["${TSB}", "${assist}"],
+        "summaryEffects": ["statusTrigger ${TSB}"]
+    },
+    "1025": {
+        "id": "1025",
+        "desc": "Blinkblade",
+        "text": "When 1 ally with the fastest Speed inflicts ${rupture} damage, gain 1 ${offup} next turn (3 times per turn)",
+        "vars": {"rupture": {"type": "status", "fixed": {"id": "4"}}, "offup": {"type": "status", "fixed": {"id": "10"}}},
+        "tags": ["${rupture}", "${offup}"],
+        "summaryEffects": ["status ${offup} 3"]
+    },
+    "1026": {
+        "id": "1026",
+        "desc": "Support",
+        "text": "1 ally with the most SP deals +10% Pierce damage.",
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage 10%"]
+    },
+    "1027": {
+        "id": "1027",
+        "desc": "Indiscriminate Art",
+        "text": "Deal and take +25% damage.",
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage 25%"]
+    },
+    "1028": {
+        "id": "1028",
+        "desc": "Hustle",
+        "text": "1 ally with the lowest Max HP deals and takes +20% damage.",
+        "tags": ["increased damage"],
+        "summaryEffects": ["damage 20%"]
+    },
+    "1029": {
+        "id": "1029",
+        "desc": "Staunchness",
+        "text": "At less than 50% HP, gain 1 ${prot} at the start of the combat phase.",
+        "vars": {"prot": {"type": "status", "fixed": {"id": "16"}}},
+        "tags": ["${prot}"],
+        "summaryEffects": ["status ${prot} 1"]
+    },
+    "1030": {
+        "id": "1030",
+        "desc": "Backup",
+        "text": "1 ally with the highest Max HP takes -10% damage from attack skills."
+    },
+    "1031": {
+        "id": "1031",
+        "desc": "Entertainment",
+        "text": "Heal 6 SP next turn.",
+        "summaryEffects": ["sp 6 1"]
+    },
+    "1032": {
+        "id": "1032",
+        "desc": "Frivolous Jokes",
+        "text": "At the start of combat phase, the ally with the least SP heals 6 SP.",
+        "summaryEffects": ["sp 6 1"]
+    },
+    "1033": {
+        "id": "1033",
+        "desc": "Gain 2 statuses next turn",
+        "text": "Gain ${num} ${status1} and ${status2} next turn",
+        "vars": {"num": {"type": "num"}, "status1": {"type": "status"}, "status2": {"type": "status"}},
+        "tags": ["${status1}", "${status2}"],
+        "summaryEffects": ["status ${status1} ${num} self", "status ${status2} ${num} self"]
+    },
+    "1034": {
+        "id": "1034",
+        "desc": "Coin Power for next coin",
+        "text": "Next Coin has +${num} Power",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["coin power"],
+        "summaryEffects": ["coinPower ${num} nextCoin"]
+    },
+    "1035": {
+        "id": "1035",
+        "desc": "Ressentiment",
+        "text": "Deal +10% damage to targets with higher Max HP.",
+        "summaryEffects": ["damage 10%"]
+    },
+    "1036": {
+        "id": "1036",
+        "desc": "Spite-driven",
+        "text": "1 ally with the lowest Max HP deals +10% Blunt damage."
+    },
+    "1037": {
+        "id": "1037",
+        "desc": "Last-ditch Struggle",
+        "text": "At less than 25% HP, gain +1 clash Power in a clash.",
+        "summaryEffects": ["clashPower 1"]
+    },
+    "1038": {
+        "id": "1038",
+        "desc": "Determination to Survive",
+        "text": "1 ally with the least HP and less than 50% of Max HP gains +1 Clash Power in a clash."
+    },
+    "1039": {
+        "id": "1039",
+        "desc": "Skill power below 0 SP",
+        "text": "Skill Power +${num} when below 0 SP",
+        "vars": {"num": {"type": "num"}},
+        "summaryEffects": ["power ${num}"],
+        "isCond": true
+    },
+    "1040": {
+        "id": "1040",
+        "desc": "Split Evil",
+        "text": "On hit, inflict 1 ${bleed} at a 50% chance.",
+        "vars": {"bleed": {"type": "status", "fixed": {"id": "2"}}},
+        "summaryEffects": ["statusBonus ${bleed} 1 always"]
+    },
+    "1041": {
+        "id": "1041",
+        "desc": "Gambler",
+        "text": "1 ally with the most HP deals +20% damage with Heads Coins."
+    },
+    "1042": {
+        "id": "1042",
+        "desc": "Pluckiness",
+        "text": "When an ally is defeated, gain 1 ${atkPowerUp} next turn.",
+        "vars": {"atkPowerUp": {"type": "status", "fixed": {"id": "19"}}},
+        "summaryEffects": ["status ${atkPowerUp} 1 self"]
+    },
+    "1043": {
+        "id": "1043",
+        "desc": "Grudge",
+        "text": "1 ally with the least SP gains 1 ${atkPowerUp} the turn after an ally is defeated.",
+        "vars": {"atkPowerUp": {"type": "status", "fixed": {"id": "19"}}},
+        "summaryEffects": ["status ${atkPowerUp} 1 self"]
+    },
+    "1044": {
+        "id": "1044",
+        "desc": "Executor",
+        "text": "If target’s SP is below 0, deal +10% damage.",
+        "summaryEffects": ["damage 10%"]
+    },
+    "1045": {
+        "id": "1045",
+        "desc": "Military Mindset",
+        "text": "1 ally with the most HP deals +30% damage to enemies below 0 SP.",
+        "summaryEffects": ["damage 30%"]
+    },
+    "1046": {
+        "id": "1046",
+        "desc": "Heal by portion of damage dealt",
+        "text": "Heal by ${num}% of damage dealt",
+        "vars": {"num": {"type": "num"}},
+        "tags": ["lifesteal"],
+        "summaryEffects": ["lifesteal ${num}%"]
+    },
+    "1047": {
+        "id": "1047",
+        "desc": "Forced Survival",
+        "text": "Heal 5 HP at the start of the combat phase.",
+        "tags": ["hp healing"],
+        "summaryEffects": ["hp 5 1"]
+    },
+    "1048": {
+        "id": "1048",
+        "desc": "Gene Code G-0",
+        "text": "At the start of the combat phase, the ally with the least HP heals 5 HP.",
+        "tags": ["hp healing"],
+        "summaryEffects": ["hp 5 1"]
+    }
+}

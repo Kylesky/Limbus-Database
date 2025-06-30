@@ -1,0 +1,29 @@
+.coin {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+
+.coinIconContainer {
+    display: inline-block;
+    position: relative;
+}
+
+.coinIcon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.coinNumber {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+}
+
+.coinEffects {
+    display: inline-block;
+    padding-left: 0.5em;
+    margin-top: -0.5em;
+}

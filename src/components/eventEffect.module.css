@@ -1,0 +1,8 @@
+.topEventEffect {
+    display: flex;
+    flex-direction: column;
+}
+
+.eventEffect {
+    display: inline-block;
+}

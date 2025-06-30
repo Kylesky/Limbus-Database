@@ -1,0 +1,61 @@
+.status {
+    display: inline-block;
+}
+
+.status > img {
+    display: inline;
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: -1px;
+    margin-right: 2px;
+    transform: translateY(25%);
+}
+
+.statusTooltip {
+    outline-style: solid;
+    outline-color: #ffffff;
+    outline-width: 1px;
+    background-color: #000000;
+    text-align: left;
+}
+
+.statusHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.statusHeader > img {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 4px;
+}
+
+.statusDesc {
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1.5;
+    inline-size: 50ch;
+    text-wrap: wrap;
+    white-space: pre-wrap;
+}
+
+.statusText {
+    display: flex;
+    font-size: 1em;
+}
+
+.statusTextBuff {
+    color: yellow;
+}
+
+.statusTextDebuff {
+    color: red;
+}
+
+.statusTextNeutral {
+    color: darkgoldenrod;
+}

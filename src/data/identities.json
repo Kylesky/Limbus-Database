@@ -1,0 +1,1999 @@
+{
+    "10101": {
+        "id": "10101",
+        "sinner": "1",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "72+(2.48*L)",
+        "speed": [4, 8],
+        "defenseLevel": -2,
+        "staggerThresholds": [0.65, 0.35, 0.15],
+        "slashResist": 2,
+        "pierceResist": 0.5,
+        "bluntResist": 1,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Deflect",
+                "damageType": "slash",
+                "sinAffinity": "gloom",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "End-stop Stab",
+                "damageType": "pierce",
+                "sinAffinity": "envy",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}, 
+                                {"id": "2", "vars": {"num": 1, "status": {"id": "5"}}}
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Enjamb",
+                "damageType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 6,
+                "coinPower": 2,
+                "numCoins": 3,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "5"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "5", "cond": {"id": "1"}, "vars": {"num": 1, "status": {"id": "17"}}}]
+                        }   
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Guard",
+                "defendType": "guard",
+                "sinAffinity": "gloom",
+                "basePower": 7,
+                "coinPower": 3,
+                "numCoins": 1,
+                "defenseLevel": -2,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Information Relay",
+                "costType": "res",
+                "costSins": [{"num": 4, "sin": "gloom"}],
+                "effects": [
+                    {"id": "11", "vars": {"num": 1, "numTargets": 2, "status": {"id": "8"}}}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Information Neutralization",
+                "costType": "owned",
+                "costSins": [{"num": 4, "sin": "gloom"}],
+                "effects": [
+                    {"id": "10", "cond": {"id": "2"}, "vars": {"num": 10, "numTargets": 1, "target": "ally with the least SP if they lost SP"}}
+                ]
+            }
+        ]
+    },
+    "10112": {
+        "id": "10112",
+        "sinner": "1",
+        "name": "Liu Assoc. South Section 3",
+        "rarity": "000",
+        "release": "2025-02-20",
+        "season": "standard fare",
+        "releaseSeason": "5",
+        "hp": "66+(2.73*L)",
+        "speed": [4, 6],
+        "defenseLevel": 2,
+        "staggerThresholds": [0.65, 0.35, 0.15],
+        "slashResist": 0.5,
+        "pierceResist": 1,
+        "bluntResist": 2,
+        "ingameTags": ["Fixer", "Liu Association"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Flame Hew",
+                "damageType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 3,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "12", "vars": {"num": 1, "step": 3, "status": {"id": "1"}, "max": 2}}]},
+                    {"effects": [{"id": "13", "vars": {"num": 10, "step": 10, "status": {"id": "1"}, "max": 30}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]},
+                        {"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]},
+                        {"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Frontal Assault",
+                "damageType": "slash",
+                "sinAffinity": "wrath",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 3,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "12", "vars": {"num": 1, "step": 6, "status": {"id": "1"}, "max": 2}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "1"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "1"}}}]}
+                    ],
+                    [
+                        {"effects": [{"id": "13", "vars": {"num": 5, "step": 1, "status": {"id": "1"}, "max": 60}}]},
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "2", "cond": {"id": "3", "vars": {"num": 6, "status": {"id": "1"}}},"vars": {"num": 2, "status": {"id": "1"}}}
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Flow of the Sword",
+                "damageType": "slash",
+                "sinAffinity": "envy",
+                "basePower": 4,
+                "coinPower": 3,
+                "numCoins": 4,
+                "offenseLevel": 4,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "12", "vars": {"num": 1, "step": 6, "status": {"id": "1"}, "max": 2}}]},
+                    {"effects": [{"id": "13", "vars": {"num": 10, "step": 6, "status": {"id": "1"}, "max": 30}}]},
+                    {
+                        "event": {"id": "5"},
+                        "effects": [{"id": "10", "vars": {"num": 15, "numTargets": 1, "target": "other ally with the least SP"}}],
+                        "subeffects": [{"effects": [{"id": "14", "cond": {"id": "12", "vars": {"status": {"id": "1"}, "num": 10}}}]}]
+                    }
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "1"}}}]}],
+                    [
+                        {"effects": [{"id": "13", "vars": {"num": 2, "step": 1, "status": {"id": "1"}, "max": 60}}]},
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "15", "vars": {"affinity": "Wrath", "status": {"id": "1"}, "max": 30}},
+                                {"id": "16", "vars": {"num": 2, "status": {"id": "1"}}}
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Flame Counter",
+                "defendType": "counter",
+                "damageType": "slash",
+                "sinAffinity": "wrath",
+                "basePower": 5,
+                "coinPower": 3,
+                "numCoins": 2,
+                "defenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "14"}, "effects": [{"id": "17", "vars": {"status": {"id": "1"}, "max": 15}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "1006", "cond": {"id": "3", "vars": {"num": 10, "status": {"id": "1"}}},"vars": {"num": 10}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "8"}, 
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}],
+                            "subeffects": [
+                                {"effects": [{"id": "18", "cond": {"id": "13"}, "vars": {"num": 1, "status": {"id": "1"}}}]}
+                            ]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "8"}, 
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "1"}}}],
+                            "subeffects": [
+                                {"effects": [{"id": "18", "cond": {"id": "13"}, "vars": {"num": 1, "status": {"id": "1"}}}]}
+                            ]
+                        }
+                    ]
+                ]
+            }
+        ],
+        "passives": [
+            {
+                "name": "Inner Ardor",
+                "costType": "owned",
+                "costSins": [{"num": 4, "sin": "wrath"}],
+                "effects": [{"id": "1020"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Liu Defensive Square",
+                "costType": "res",
+                "costSins": [{"num": 3, "sin": "wrath"}],
+                "effects": [{"id": "1021"}]
+            }
+        ]
+    },
+    "10201": {
+        "id": "10201",
+        "sinner": "2",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "84+(2.9*L)",
+        "speed": [2, 4],
+        "defenseLevel": 1,
+        "staggerThresholds": [0.60, 0.30, 0.15],
+        "slashResist": 2,
+        "pierceResist": 0.5,
+        "bluntResist": 1,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Downward Slash",
+                "damageType": "blunt",
+                "sinAffinity": "pride",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "18"}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Upward Stab",
+                "damageType": "blunt",
+                "sinAffinity": "sloth",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "5", "vars": {"num": 3, "status": {"id": "11"}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Drilling Stab",
+                "damageType": "pierce",
+                "sinAffinity": "gluttony",
+                "basePower": 7,
+                "coinPower": 2,
+                "numCoins": 2,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "8"},
+                            "effects": [{"id": "5", "vars": {"num": 1, "status": {"id": "20"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "5", "vars": {"num": 1, "status": {"id": "20"}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Evade",
+                "defendType": "evade",
+                "sinAffinity": "pride",
+                "basePower": 2,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": 1,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Analytic Eye",
+                "costType": "res",
+                "costSins": [{"num": 2, "sin": "pride"}],
+                "effects": [
+                    {"id": "19", "vars": {"num": 10, "target": "units with negative status effects"}}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Keen Observation",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "pride"}],
+                "effects": [{"id": "1022"}]
+            }
+        ]
+    },
+    "10212": {
+        "id": "10212",
+        "sinner": "2",
+        "name": "Heishou Pack - Mao Branch Adept",
+        "rarity": "000",
+        "release": "2025-05-22",
+        "season": "6",
+        "releaseSeason": "6",
+        "hp": "76+(3.19*L)",
+        "speed": [4, 7],
+        "defenseLevel": 3,
+        "staggerThresholds": [0.50],
+        "slashResist": 0.5,
+        "pierceResist": 1,
+        "bluntResist": 2,
+        "ingameTags": ["Heishou Pack", "Heishou Pack - Mao Branch"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Blinkstep",
+                "damageType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 3,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 1,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "20", "cond": {"id": "14", "vars": {"num": 3}}, "vars": {"num": 1}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "20", "cond": {"id": "3", "vars": {"num": 4, "status": {"id": "4"}}}, "vars": {"num": 1}}]},
+                    {"event": {"id": "6"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "21", "cond": {"id": "15", "vars": {"num": 10}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Clearing the Path, My Lord",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 4,
+                "coinPower": 6,
+                "numCoins": 2,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "22", "cond": {"id": "16"}, "vars": {"status": {"id": "1010"}, "max": 50}}]},
+                    {"effects": [{"id": "20", "cond": {"id": "14", "vars": {"num": 3}}, "vars": {"num": 1}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "20", "cond": {"id": "3", "vars": {"num": 4, "status": {"id": "4"}}}, "vars": {"num": 1}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "7", "vars": {"num": 2, "status": {"id": "14"}}, "mod": "(once per turn)"}]},
+                    {"event": {"id": "6"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]},
+                        {
+                            "effects": [{"id": "1006", "cond": {"id": "17", "vars": {"status1": {"id": "1011"}, "status2": {"id": "1012"}}}, "vars": {"num": 50}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Traceless to Sight and Sound Alike.",
+                "damageType": "slash",
+                "sinAffinity": "gluttony",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 3,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "23", "cond": {"id": "16"}, "vars": {"status": {"id": "4"}, "max": 50}}]},
+                    {"effects": [{"id": "24", "cond": {"id": "16"}, "vars": {"num": 1, "step": 2, "max": 2}}]},
+                    {"event": {"id": "3"}, "effects": [{"id": "3", "vars": {"num": 1, "status": {"id": "1013"}}, "mod": "(once per turn)"}]},
+                    {"event": {"id": "12"}, "effects": [{"id": "1004", "cond": {"id": "18", "vars": {"num": 10, "status": {"id": "1010"}}}, "vars": {"skill": "Ascendant Heishou - Mao Technique: Cloudsplitting Manifestation", "label": "Skill 3-2"}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "20", "cond": {"id": "3", "vars": {"num": 15, "status": {"id": "4"}}}, "vars": {"num": 1}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "3", "vars": {"num": 3, "status": {"id": "1014"}}}]},
+                    {"event": {"id": "6"}, "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "4"}}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "25", "vars": {"status": {"id": "1011"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                    ],
+                    [
+                        {"effects": [{"id": "1006", "cond": {"id": "15", "vars": {"num": 10}}, "vars": {"num": 30}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "4"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "21", "cond": {"id": "15", "vars": {"num": 10}}}]},
+                        {"event": {"id": "15"}, "effects": [{"id": "25", "vars": {"status": {"id": "1011"}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3-2",
+                "count": 0,
+                "name": "Ascendant Heishou - Mao Technique: Cloudsplitting Manifestation",
+                "damageType": "slash",
+                "sinAffinity": "gluttony",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 3,
+                "offenseLevel": 4,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "23", "cond": {"id": "16"}, "vars": {"status": {"id": "4"}, "max": 50}}]},
+                    {"effects": [{"id": "24", "cond": {"id": "16"}, "vars": {"num": 1, "step": 2, "max": 2}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "12", "vars": {"num": 1, "step": 10, "status": {"id": "4"}, "max": 2}}]},
+                    {
+                        "event": {"id": "1"}, 
+                        "effects": [
+                            {"id": "3", "cond": {"id": "15", "vars": {"num": 10}}, "vars": {"num": 20, "status": {"id": "6"}}},
+                            {"id": "26", "cond": {"id": "19", "vars": {"num": 4, "status": {"id": "6"}}}, "vars": {"num": 4, "status": {"id": "6"}}}
+                        ]
+                    },
+                    {"event": {"id": "1"}, "effects": [{"id": "3", "vars": {"num": 3, "status": {"id": "1014"}}}]},
+                    {"event": {"id": "6"}, "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "4"}}}]},
+                    {"event": {"id": "5"}, "effects": [{"id": "27", "vars": {"num": 10, "status": {"id": "1010"}}}]}
+                ],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "25", "vars": {"status": {"id": "1012"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "25", "vars": {"status": {"id": "1011"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}
+                    ],
+                    [
+                        {"effects": [{"id": "1006", "cond": {"id": "15", "vars": {"num": 10}}, "vars": {"num": 30}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "4"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "21", "cond": {"id": "15", "vars": {"num": 10}}}]},
+                        {"event": {"id": "15"}, "effects": [{"id": "25", "vars": {"status": {"id": "1012"}}}]},
+                        {"event": {"id": "15"}, "effects": [{"id": "25", "vars": {"status": {"id": "1011"}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "It Shall be Done.",
+                "defendType": "counter",
+                "damageType": "slash",
+                "sinAffinity": "gluttony",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 2,
+                "defenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "13"}},
+                    {"event": {"id": "3"}, "effects": [{"id": "3", "vars": {"num": 1, "status": {"id": "1013"}}, "mod": "(once per turn)"}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "29", "vars": {"num": 1, "step": 10, "max": 6}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "3", "vars": {"num": 3, "status": {"id": "1014"}}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "28", "cond": {"id": "14", "vars": {"num": 2}}, "vars": {"num": 1, "step": 2, "max": 2}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Defense-2",
+                "name": "Swiftfeet Protection",
+                "defendType": "guard",
+                "sinAffinity": "gluttony",
+                "basePower": 4,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "30", "vars": {"status": {"id": "1015"}}}]},
+                    {"effects": [{"id": "31", "vars": {"status": {"id": "1013"}}}]},
+                    {"event": {"id": "12"}, "effects": [{"id": "1004", "cond": {"id": "18", "vars": {"num": 10, "status": {"id": "1010"}}}, "vars": {"skill": "Ascendant Heishou - Mao Technique: Cloudsplitting Manifestation", "label": "Skill 3-2"}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "34", "vars": {"num": 1, "step": 10, "max": 6}}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "32"}]},
+                    {"event": {"id": "1"}, "effects": [{"id": "5", "vars": {"num": 2, "status": {"id": "16"}}, "mod": "(once per turn)"}]}
+
+                ],
+                "coinEffects": [
+                    [{"effects": [{"id": "30", "vars": {"status": {"id": "1008"}}}]}]
+                ]
+            }
+        ],
+        "passives": [
+            {
+                "name": "Tianjiu Star",
+                "effects": [{"id": "1023"}]
+            },
+            {
+                "name": "Heishou Mutation [Mao] / Mao Branch Adept",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "gluttony"}],
+                "effects": [
+                    {"id": "33", "cond": {"id": "16"}, "vars": {"num": 2, "step": 1, "max": 10}},
+                    {"id": "1024"}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Blinkblade",
+                "costType": "res",
+                "costSins": [{"num": 4, "sin": "gluttony"}],
+                "effects": [{"id": "1025"}]
+            }
+        ],
+        "flowChart": {
+            "states": [
+                {"id": "1", "data": {"text": "Encounter Start: Start with 0 ${TSB}", "vars": {"TSB": {"id": "1010"}}}},
+                {"id": "2", "data": {"text": "Gain ${strider} for the next 3 turns\nHigh chance to have 10+ speed for Skill 1 and Skill 3 coin reuse", "vars": {"strider": {"id": "1014"}}}},
+                {"id": "3", "data": {"text": "Gain ${assist}", "vars": {"assist": {"id": "1013"}}}},
+                {"id": "4", "data": {"text": "Trigger ${assist}\nGain 5 ${TSB} if passive is active", "vars": {"assist": {"id": "1013"}, "TSB": {"id": "1010"}}}},
+                {"id": "5", "data": {"text": "Trigger Defense-2"}},
+                {"id": "6", "data": {"text": "Trigger Skill 3-2\nConsume 10 ${TSB}", "vars": {"TSB": {"id": "1010"}}}},
+                {"id": "7", "data": {"text": "Gain 1 ${TSB}\nGain 2 instead if triggered by self\nMax 5 times per turn", "vars": {"TSB": {"id": "1010"}}}},
+                {"id": "8", "data": {"text": "Replace Skill 3 with Skill 3-2\nConsume 10 ${TSB} on use", "vars": {"TSB": {"id": "1010"}}}}
+            ],
+            "transitions": [
+                {"id": "1-2", "source": "1", "target": "2", "data": {"text": "Use Skill 3, Skill 3-2, or Defense Skill"}},
+                {"id": "1-3", "source": "1", "target": "3", "data": {"text": "Use Skill 3 or Defense Skill"}},
+                {"id": "3-4", "source": "3", "target": "4", "data": {"text": "Have an unopposed attack on an ally"}},
+                {"id": "4-5", "source": "4", "target": "5", "data": {"text": "Less than 10 ${TSB}", "vars": {"TSB": {"id": "1010"}}}},
+                {"id": "4-6", "source": "4", "target": "6", "data": {"text": "10 or more ${TSB}", "vars": {"TSB": {"id": "1010"}}}},
+                {"id": "1-7", "source": "1", "target": "7", "data": {"text": "Trigger a Deathrite effect and passive is active"}},
+                {"id": "1-8", "source": "1", "target": "8", "data": {"text": "10 or more ${TSB}", "vars": {"TSB": {"id": "1010"}}}}
+            ]
+        }
+    },
+    "10301": {
+        "id": "10301",
+        "sinner": "3",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "66+(2.28*L)",
+        "speed": [3, 6],
+        "defenseLevel": -2,
+        "staggerThresholds": [0.70, 0.40, 0.20],
+        "slashResist": 1,
+        "pierceResist": 0.5,
+        "bluntResist": 2,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Joust",
+                "damageType": "pierce",
+                "sinAffinity": "lust",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [{"event": {"id": "6"}, "effects": [{"id": "7", "vars": {"num": 2, "status": {"id": "14"}}}]}],
+                "coinEffects": [[]]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Galloping Tilt",
+                "damageType": "pierce",
+                "sinAffinity": "envy",
+                "basePower": 4,
+                "coinPower": 12,
+                "numCoins": 1,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [{"event": {"id": "6"}, "effects": [{"id": "7", "vars": {"num": 2, "status": {"id": "19"}}}]}],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "2"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "For Justice!",
+                "damageType": "pierce",
+                "sinAffinity": "gluttony",
+                "basePower": 3,
+                "coinPower": 3,
+                "numCoins": 3,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "20", "cond": {"id": "15", "vars": {"num": 10}}, "vars": {"num": 2}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "2"}}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Evade",
+                "defendType": "evade",
+                "sinAffinity": "lust",
+                "basePower": 2,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": -2,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Righteous Retribution",
+                "costType": "res",
+                "costSins": [{"num": 3, "sin": "lust"}],
+                "effects": [
+                    {"id": "35", "vars": {"num": 10, "target": "a won clash"}}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Support",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "lust"}],
+                "effects": [{"id": "1026"}]
+            }
+        ]
+    },
+    "10401": {
+        "id": "10401",
+        "sinner": "4",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "66+(2.28*L)",
+        "speed": [3, 6],
+        "defenseLevel": -4,
+        "staggerThresholds": [0.70, 0.40, 0.20],
+        "slashResist": 0.5,
+        "pierceResist": 1,
+        "bluntResist": 2,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Paint",
+                "damageType": "slash",
+                "sinAffinity": "gluttony",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [[
+                    {"event": {"id": "2"}, "effects": [{"id": "7", "vars": {"num": 2, "status": {"id": "6"}}}]}
+                ]]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Splatter",
+                "damageType": "slash",
+                "sinAffinity": "lust",
+                "basePower": 4,
+                "coinPower": 5,
+                "numCoins": 2,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"effects": [{"id": "1006", "cond": {"id": "20"}, "vars": {"num": 30}}]}],
+                    [{"effects": [{"id": "1006", "cond": {"id": "20"}, "vars": {"num": 30}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Brushstroke",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 5,
+                "coinPower": 3,
+                "numCoins": 3,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "3"}, "effects": [{"id": "3", "vars": {"num": 2, "status": {"id": "23"}}}]}
+                ],
+                "coinEffects": [
+                    [],
+                    [{"event": {"id": "2"}, "effects": [{"id": "7", "vars": {"num": 2, "status": {"id": "6"}}}]}],
+                    []
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Evade",
+                "defendType": "evade",
+                "sinAffinity": "gluttony",
+                "basePower": 2,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": -2,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Indiscriminate Art",
+                "costType": "res",
+                "costSins": [{"num": 3, "sin": "gluttony"}],
+                "effects": [{"id": "1027"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Hussle",
+                "costType": "res",
+                "costSins": [{"num": 3, "sin": "gluttony"}],
+                "effects": [{"id": "1028"}]
+            }
+        ]
+    },
+    "10501": {
+        "id": "10501",
+        "sinner": "5",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "90+(3.1*L)",
+        "speed": [2, 3],
+        "defenseLevel": 3,
+        "staggerThresholds": [0.50, 0.20],
+        "slashResist": 1,
+        "pierceResist": 2,
+        "bluntResist": 0.5,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Un, Deux",
+                "damageType": "blunt",
+                "sinAffinity": "sloth",
+                "basePower": 3,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": -3,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Nailing Fist",
+                "damageType": "blunt",
+                "sinAffinity": "pride",
+                "basePower": 6,
+                "coinPower": 9,
+                "numCoins": 1,
+                "offenseLevel": -3,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "1"}, "effects": [{"id": "7", "vars": {"num": 3, "status": {"id": "21"}}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1003"}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Des Coups",
+                "damageType": "blunt",
+                "sinAffinity": "gloom",
+                "basePower": 4,
+                "coinPower": 2,
+                "numCoins": 4,
+                "offenseLevel": -3,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "1"}, "effects": [{"id": "7", "vars": {"num": 3, "status": {"id": "16"}}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "3"}}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Guard",
+                "defendType": "guard",
+                "sinAffinity": "sloth",
+                "basePower": 10,
+                "coinPower": 3,
+                "numCoins": 1,
+                "defenseLevel": 3,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Staunchness",
+                "costType": "owned",
+                "costSins": [{"num": 2, "sin": "sloth"}],
+                "effects": [{"id": "1029"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Backup",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "sloth"}],
+                "effects": [{"id": "1030"}]
+            }
+        ]
+    },
+    "10512": {
+        "id": "10512",
+        "sinner": "5",
+        "name": "The Thumb East Capo IIII",
+        "rarity": "000",
+        "release": "2025-06-19",
+        "season": "6",
+        "releaseSeason": "6",
+        "hp": "82+(2.82*L)",
+        "speed": [4, 6],
+        "defenseLevel": 2,
+        "staggerThresholds": [0.65],
+        "slashResist": 1,
+        "pierceResist": 0.5,
+        "bluntResist": 2,
+        "ingameTags": ["The Thumb", "Syndicate", "Capo IIII"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Double Slash - Blast [爆]",
+                "damageType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {
+                        "effects": [{"id": "1000", "vars": {"num": 1, "step": 4, "status1": {"id": "1"}, "status2": {"id": "3"}, "max": 3}}]
+                    }
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "3"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "1"}}}]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Triple Slash - Blast [爆]",
+                "damageType": "slash",
+                "sinAffinity": "lust",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 3,
+                "offenseLevel": 4,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {
+                        "effects": [{"id": "1000", "vars": {"num": 1, "step": 4, "status1": {"id": "1"}, "status2": {"id": "3"}, "max": 3}}]
+                    }
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "3"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "3"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "1"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "3"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 2, "status": {"id": "1"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "1002", "cond": {"id": "4", "vars": {"num": 3, "status": {"id": "3"}}}, "vars": {"num": 1}}
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Tanglecleaver [快刀亂麻]",
+                "damageType": "blunt",
+                "sinAffinity": "wrath",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 3,
+                "offenseLevel": 5,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {
+                        "effects": [{"id": "1004", "cond": {"id": "6", "vars": {"status": {"id": "1002"}}}, "vars": {"skill": "Savage Tigerslayer's Perfected Flurry of Blades", "label": "Skill 3-2"}}],
+                        "subeffects": [
+                            {
+                                "event": {"id": "12"},
+                                "effects": [{"id": "1005", "cond": {"id": "7", "vars": {"status": {"id": "1002"}}}}]
+                            }
+                        ]
+                    },
+                    {
+                        "effects": [{"id": "1009", "vars": {"num": 1, "step": 8, "status1": {"id": "1"}, "status2": {"id": "3"}, "max": 2}}]
+                    }
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "3"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "1"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 3, "status": {"id": "3"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 3, "status": {"id": "1"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1000"}}}]
+                        },
+                        {
+                            "effects": [{"id": "1006", "cond": {"id": "8", "vars": {"status": {"id": "1000"}}}, "vars": {"num": 50}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1007", "vars": {"status1": {"id": "1003"}, "status2": {"id": "1004"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "1002", "vars": {"num": 1}}
+                            ],
+                            "subeffects": [
+                                {
+                                    "effects": [{"id": "1008", "cond": {"id": "9", "vars": {"status": {"id": "1000"}}}, "vars": {"num": 2}}]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3-2",
+                "count": 0,
+                "name": "Savage Tigerslayer's Perfected Flurry of Blades [超絕猛虎殺擊亂斬]",
+                "damageType": "blunt",
+                "sinAffinity": "wrath",
+                "basePower": 3,
+                "coinPower": 3,
+                "numCoins": 5,
+                "offenseLevel": 6,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {
+                        "effects": [{"id": "1009", "vars": {"num": 1, "step": 8, "status1": {"id": "1"}, "status2": {"id": "3"}, "max": 2}}]
+                    }
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "3"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 3, "status": {"id": "3"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1002"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "1"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1002"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "2", "vars": {"num": 3, "status": {"id": "1"}}}]
+                        }
+                    ],
+                    [
+                        {
+                            "effects": [{"id": "1001", "vars": {"num": 1, "status": {"id": "1002"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1007", "vars": {"status1": {"id": "1003"}, "status2": {"id": "1004"}}}]
+                        },
+                        {
+                            "event": {"id": "2"},
+                            "effects": [
+                                {"id": "1002", "vars": {"num": 1}}
+                            ],
+                            "subeffects": [
+                                {
+                                    "effects": [{"id": "1008", "cond": {"id": "9", "vars": {"status": {"id": "1002"}}}, "vars": {"num": 2}}]
+                                }
+                            ]
+                        }
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "I'm Burning Up.",
+                "defendType": "counter",
+                "sinAffinity": "sloth",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "13"}},
+                    {
+                        "effects": [{"id": "1000", "vars": {"num": 1, "step": 4, "status1": {"id": "1"}, "status2": {"id": "3"}, "max": 2}}]
+                    },
+                    {
+                        "effects": [{"id": "1010", "cond": {"id": "10", "vars": {"status1": {"id": "1000"}, "status2": {"id": "1002"}, "num": 0}}, "vars": {"num": 2}}]
+                    }
+                ],
+                "coinEffects": [
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1013", "vars": {"num": 1, "status": {"id": "3"}, "times": 2}}]
+                        }
+                    ],
+                    [
+                        {
+                            "event": {"id": "2"},
+                            "effects": [{"id": "1014", "vars": {"num": 1, "status": {"id": "3"}, "times": 2}}]
+                        }
+                    ]
+                ]
+            }
+        ],
+        "passives": [
+            {
+                "name": "Chachihu [揷翅虎]",
+                "effects": [
+                    {"id": "1011", "cond": {"id": "11"}, "vars": {"num": 12, "status": {"id": "1000"}}},
+                    {"id": "1012"},
+                    {"id": "1015"},
+                    {"id": "1016"}
+                ]
+            },
+            {
+                "name": "Tiantui Star's Blade [天退星刀]",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "sloth"}],
+                "effects": [
+                    {"id": "1017"},
+                    {"id": "1018"}
+                ]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Savage Tiger's Lunge",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "sloth"}],
+                "effects": [
+                    {"id": "1019"}
+                ]
+            }
+        ],
+        "flowChart": {
+            "states": [
+                {"id": "1", "data": {"text": "Encounter Start: Gain 12 ${TR}", "vars": {"TR": {"id": "1000"}}}},
+                {"id": "2", "data": {"text": "Once: Gain 8 ${STR}\nGain ${US}\nSkill 3 becomes Skill 3-2", "vars": {"STR": {"id": "1002"}, "US": {"id": "1005"}}}},
+                {"id": "3", "data": {"text": "Gain ${USS}\ninstead of ${US}", "vars": {"USS": {"id": "1006"}, "US": {"id": "1005"}}}},
+                {"id": "4", "data": {"text": "Gain ${overheat}\nSkill 3-2 reverts to Skill 3", "vars": {"overheat": {"id": "1007"}}}}
+            ],
+            "transitions": [
+                {"id": "1-2", "source": "1", "target": "2", "data": {"text": "${TR} = 0\nor Staggered\nor Used Defense Skill", "vars": {"TR": {"id": "1000"}}}},
+                {"id": "2-3", "source": "2", "target": "3", "data": {"text": "Used 8 or more ammo"}},
+                {"id": "3-4", "source": "3", "target": "4", "data": {"text": "${STR} = 0", "vars": {"STR": {"id": "1002"}}}}
+            ]
+        }
+    },
+    "10601": {
+        "id": "10601",
+        "sinner": "6",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "66+(2.28*L)",
+        "speed": [3, 6],
+        "defenseLevel": -2,
+        "staggerThresholds": [0.70, 0.40, 0.20],
+        "slashResist": 2,
+        "pierceResist": 1,
+        "bluntResist": 0.5,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Downward Cleave",
+                "damageType": "blunt",
+                "sinAffinity": "pride",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Dual Strike",
+                "damageType": "slash",
+                "sinAffinity": "sloth",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "20", "cond": {"id": "21"}, "vars": {"num": 1}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Whirlwind",
+                "damageType": "blunt",
+                "sinAffinity": "lust",
+                "basePower": 6,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 2,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"effects": [{"id": "20", "cond": {"id": "21"}, "vars": {"num": 2}}]}
+                ],
+                "coinEffects": [
+                    [],
+                    [
+                        {"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "20"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "5"}}}]},
+                        {"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "4"}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Evade",
+                "defendType": "evade",
+                "sinAffinity": "sloth",
+                "basePower": 2,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": -2,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Entertainment",
+                "costType": "res",
+                "costSins": [{"num": 2, "sin": "sloth"}],
+                "effects": [{"id": "1031"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Frivolous Jokes",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "sloth"}],
+                "effects": [{"id": "1032"}]
+            }
+        ]
+    },
+    "10701": {
+        "id": "10701",
+        "sinner": "7",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "78+(2.69*L)",
+        "speed": [2, 5],
+        "defenseLevel": 0,
+        "staggerThresholds": [0.65, 0.35, 0.15],
+        "slashResist": 2,
+        "pierceResist": 1,
+        "bluntResist": 0.5,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Bat Bash",
+                "damageType": "blunt",
+                "sinAffinity": "envy",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "3"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Smackdown",
+                "damageType": "blunt",
+                "sinAffinity": "wrath",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "1"}, "effects": [{"id": "1033", "vars": {"num": 1, "status1": {"id": "19"}, "status2": {"id": "8"}}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "3"}}}]}],
+                    []
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Upheaval",
+                "damageType": "blunt",
+                "sinAffinity": "lust",
+                "basePower": 4,
+                "coinPower": 8,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "8"}, "effects": [{"id": "1034", "vars": {"num": 2, "status": {"id": "20"}}}]}
+                    ],
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "1003"}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Counter",
+                "defendType": "counter",
+                "damageType": "blunt",
+                "sinAffinity": "envy",
+                "basePower": 7,
+                "coinPower": 4,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Ressentiment",
+                "costType": "res",
+                "costSins": [{"num": 4, "sin": "envy"}],
+                "effects": [{"id": "1035"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Spite-driven",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "envy"}],
+                "effects": [{"id": "1036"}]
+            }
+        ]
+    },
+    "10801": {
+        "id": "10801",
+        "sinner": "8",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "78+(2.69*L)",
+        "speed": [5, 8],
+        "defenseLevel": 0,
+        "staggerThresholds": [0.60, 0.30],
+        "slashResist": 2,
+        "pierceResist": 1,
+        "bluntResist": 0.5,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Loggerhead",
+                "damageType": "blunt",
+                "sinAffinity": "wrath",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "3"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Slide",
+                "damageType": "blunt",
+                "sinAffinity": "gluttony",
+                "basePower": 6,
+                "coinPower": 9,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [
+                    {"event": {"id": "6"}, "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "22"}}}]}
+                ],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 3, "status": {"id": "3"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Shield Bash",
+                "damageType": "blunt",
+                "sinAffinity": "gloom",
+                "basePower": 8,
+                "coinPower": 12,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [
+                            {"id": "1003"},
+                            {"id": "1", "vars": {"num": 1, "status": {"id": "28"}}}
+                        ]}
+                    ]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Guard",
+                "defendType": "guard",
+                "sinAffinity": "wrath",
+                "basePower": 7,
+                "coinPower": 3,
+                "numCoins": 1,
+                "defenseLevel": 0,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Last-ditch Struggle",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "wrath"}],
+                "effects": [{"id": "1037"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Determination to Survive",
+                "costType": "owned",
+                "costSins": [{"num": 6, "sin": "wrath"}],
+                "effects": [{"id": "1038"}]
+            }
+        ]
+    },
+    "10901": {
+        "id": "10901",
+        "sinner": "9",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "78+(2.69*L)",
+        "speed": [2, 5],
+        "staggerThresholds": [0.65, 0.35, 0.15],
+        "defenseLevel": 0,
+        "slashResist": 0.5,
+        "pierceResist": 2,
+        "bluntResist": 1,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Strike Down",
+                "damageType": "slash",
+                "sinAffinity": "gluttony",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "2"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Axe Combo",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 4,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "2"}}}]},
+                    {"event": {"id": "8"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "2"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Slay",
+                "damageType": "slash",
+                "sinAffinity": "wrath",
+                "basePower": 4,
+                "coinPower": 2,
+                "numCoins": 4,
+                "offenseLevel": 0,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "2"}}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1006", "cond": {"id": "3", "vars": {"num": 6, "status": {"id": "2"}}}, "vars": {"num": 20}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Counter",
+                "defendType": "counter",
+                "damageType": "slash",
+                "sinAffinity": "wrath",
+                "basePower": 7,
+                "coinPower": 4,
+                "numCoins": 1,
+                "offenseLevel": 0,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Split Evil",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "wrath"}],
+                "effects": [{"id": "1040"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Gambler",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "wrath"}],
+                "effects": [{"id": "1041"}]
+            }
+        ]
+    },
+    "11001": {
+        "id": "11001",
+        "sinner": "10",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "60+(2.07*L)",
+        "speed": [3, 7],
+        "staggerThresholds": [0.70, 0.40, 0.20],
+        "defenseLevel": -4,
+        "slashResist": 0.5,
+        "pierceResist": 2,
+        "bluntResist": 1,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Downward Swing",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Halberd Combo",
+                "damageType": "slash",
+                "sinAffinity": "wrath",
+                "basePower": 4,
+                "coinPower": 2,
+                "numCoins": 3,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [{"event": {"id": "6"}, "effects": [{"id": "1006", "vars": {"num": 30}}]}],
+                "coinEffects": [
+                    [],
+                    [],
+                    []
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Ravaging Cut",
+                "damageType": "slash",
+                "sinAffinity": "envy",
+                "basePower": 5,
+                "coinPower": 3,
+                "numCoins": 3,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [{"event": {"id": "6"}, "effects": [{"id": "3", "vars": {"num": 1, "status": {"id": "19"}}}]}],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Counter",
+                "defendType": "counter",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 7,
+                "coinPower": 4,
+                "numCoins": 1,
+                "offenseLevel": 3,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Pluckiness",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "pride"}],
+                "effects": [{"id": "1042"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Grudge",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "pride"}],
+                "effects": [{"id": "1043"}]
+            }
+        ]
+    },
+    "11101": {
+        "id": "11101",
+        "sinner": "11",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "60+(2.07*L)",
+        "speed": [3, 7],
+        "staggerThresholds": [0.70, 0.40, 0.20],
+        "defenseLevel": -4,
+        "slashResist": 0.5,
+        "pierceResist": 1,
+        "bluntResist": 2,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Pulled Blade",
+                "damageType": "pierce",
+                "sinAffinity": "sloth",
+                "basePower": 3,
+                "coinPower": 2,
+                "numCoins": 3,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "4"}}}]}],
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Backslash",
+                "damageType": "slash",
+                "sinAffinity": "pride",
+                "basePower": 5,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"effects": [{"id": "1006", "cond": {"id": "16"}, "vars": {"num": 20}}]}],
+                    [{"effects": [{"id": "1006", "cond": {"id": "16"}, "vars": {"num": 20}}]}]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Piercing Thrust",
+                "damageType": "pierce",
+                "sinAffinity": "gloom",
+                "basePower": 7,
+                "coinPower": 14,
+                "numCoins": 1,
+                "offenseLevel": 3,
+                "atkWeight": 1,
+                "skillEffects": [{"effects": [{"id": "1006", "cond": {"id": "22", "vars": {"num": 50}}, "vars": {"num": 20}}]}],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Evade",
+                "defendType": "evade",
+                "sinAffinity": "sloth",
+                "basePower": 2,
+                "coinPower": 10,
+                "numCoins": 1,
+                "defenseLevel": -3,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Executor",
+                "costType": "owned",
+                "costSins": [{"num": 4, "sin": "sloth"}],
+                "effects": [{"id": "1044"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Military Mindset",
+                "costType": "owned",
+                "costSins": [{"num": 5, "sin": "sloth"}],
+                "effects": [{"id": "1045"}]
+            }
+        ]
+    },
+    "11201": {
+        "id": "11201",
+        "sinner": "12",
+        "name": "LCB Sinner",
+        "rarity": "0",
+        "release": "2023-02-27",
+        "season": "standard fare",
+        "releaseSeason": "launch",
+        "hp": "72+(2.48*L)",
+        "speed": [3, 7],
+        "staggerThresholds": [0.70, 0.30],
+        "defenseLevel": 0,
+        "slashResist": 1,
+        "pierceResist": 0.5,
+        "bluntResist": 2,
+        "ingameTags": ["LCB", "Limbus Company"],
+        "skills": [
+            {
+                "label": "Skill 1",
+                "count": 3,
+                "name": "Swipe",
+                "damageType": "slash",
+                "sinAffinity": "gloom",
+                "basePower": 4,
+                "coinPower": 7,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 4, "status": {"id": "4"}}}]}]
+                ]
+            },
+            {
+                "label": "Skill 2",
+                "count": 2,
+                "name": "Jag",
+                "damageType": "pierce",
+                "sinAffinity": "gluttony",
+                "basePower": 5,
+                "coinPower": 10,
+                "numCoins": 1,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [
+                        {"event": {"id": "2"}, "effects": [{"id": "2", "vars": {"num": 1, "status": {"id": "4"}}}]},
+                        {"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 1, "status": {"id": "27"}}}]},
+                        {"event": {"id": "8"}, "effects": [{"id": "1", "vars": {"num": 2, "status": {"id": "4"}}}]}
+                    ]
+                ]
+            },
+            {
+                "label": "Skill 3",
+                "count": 1,
+                "name": "Chop Up",
+                "damageType": "pierce",
+                "sinAffinity": "sloth",
+                "basePower": 6,
+                "coinPower": 4,
+                "numCoins": 2,
+                "offenseLevel": -1,
+                "atkWeight": 1,
+                "skillEffects": [],
+                "coinEffects": [
+                    [{"event": {"id": "2"}, "effects": [{"id": "1006", "cond": {"id": "23", "vars": {"status": {"id": "4"}}}, "vars": {"num": 10}}]}],
+                    [{"event": {"id": "2"}, "effects": [{"id": "1006", "cond": {"id": "23", "vars": {"status": {"id": "4"}}}, "vars": {"num": 10}}]},
+                    {"event": {"id": "8"}, "effects": [{"id": "1046", "vars": {"num": 30}}]}]
+                ]
+            },
+            {
+                "label": "Defense",
+                "name": "Guard",
+                "defendType": "guard",
+                "sinAffinity": "gloom",
+                "basePower": 8,
+                "coinPower": 3,
+                "numCoins": 1,
+                "defenseLevel": 0,
+                "atkWeight": 1
+            }
+        ],
+        "passives": [
+            {
+                "name": "Forced Survival",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "gloom"}],
+                "effects": [{"id": "1047"}]
+            }
+        ],
+        "supportPassives": [
+            {
+                "name": "Gene Code G-0",
+                "costType": "owned",
+                "costSins": [{"num": 3, "sin": "gloom"}],
+                "effects": [{"id": "1048"}]
+            }
+        ]
+    }
+}

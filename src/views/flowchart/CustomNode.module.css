@@ -1,0 +1,11 @@
+.handle {
+    opacity: 0;
+}
+    
+.nodeContents{
+    padding: 5px;
+    border: 1px white solid;
+    border-radius: 5px;
+    font-size: 0.5em;
+    white-space: pre-wrap;
+}
