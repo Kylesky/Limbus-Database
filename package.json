@@ -1,7 +1,7 @@
 {
   "name": "limbus-database",
   "version": "0.1.0",
-  "homepage": "https://kylesky.github.io/limbus-database",
+  "homepage": "https://kylesky.github.io/Limbus-Database/",
   "private": true,
   "dependencies": {
     "@dagrejs/dagre": "^1.1.5",
