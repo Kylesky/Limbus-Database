@@ -5,6 +5,7 @@ function getIconSource(type: string, icon: string): string {
         case "sin": 
             return process.env.PUBLIC_URL + "/assets/icons/sins/" + icon + ".png";
         case "damageType": case "defendType":
+            icon = icon.charAt(0).toUpperCase() + icon.slice(1);
             return process.env.PUBLIC_URL + "/assets/icons/skill types/" + icon + ".png";
     }
     return "";
