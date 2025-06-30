@@ -18,7 +18,7 @@ type PassiveCostProps = {
 function PassiveIcons({passive}: PassiveCostProps) {
     let icons: React.ReactElement[] = [];
     if(passive.costType && passive.costSins) {
-        icons = passive.costSins.map(costSin => {return <img src={getIconSource("sin", costSin["sin"])} className={css.passiveCostIconSummary} />});
+        icons = passive.costSins.map(costSin => {return <img src={getIconSource("sin", costSin["sin"])} className={css.passiveCostIconSummary} alt={costSin["sin"]}/>});
     }
 
     let statusIds: string[] = [];
@@ -33,7 +33,7 @@ function PassiveIcons({passive}: PassiveCostProps) {
 
 function PassiveCost({passive}: PassiveCostProps) {
     if(passive.costType && passive.costSins) {
-        let costs = passive.costSins.map(costSin => {return [<img src={getIconSource("sin", costSin["sin"])} className={css.passiveCostIcon} />, <span> x{costSin["num"]}</span>]});
+        let costs = passive.costSins.map(costSin => {return [<img src={getIconSource("sin", costSin["sin"])} className={css.passiveCostIcon} alt={costSin["sin"]}/>, <span> x{costSin["num"]}</span>]});
         return <div className={css.passiveCostContainer}> {costs} <span style={{"paddingLeft": "0.2em"}}>{passive.costType.toUpperCase()}</span></div>
     } else {
         return null

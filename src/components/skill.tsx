@@ -48,7 +48,7 @@ function SkillIcons({ skill, typesOnly = false }: SkillProps) {
 
     return <div>
         <div>{icons}</div>
-        {Array.from({ length: skill.numCoins }, (_, i) => <img src={COIN_ICON_PATH} key={i} className={css.skillDetailsIcon} />)}
+        {Array.from({ length: skill.numCoins }, (_, i) => <img src={COIN_ICON_PATH} key={i} className={css.skillDetailsIcon} alt="" />)}
     </div>;
 }
 
@@ -69,7 +69,7 @@ function Skill({ skill }: SkillProps) {
                 <span className={css.skillPower}>
                     Power: {skill.basePower} {addPlusIfNonnegative(skill.coinPower)}
                 </span>
-                {Array.from({ length: skill.numCoins }, (_, i) => <img src={COIN_ICON_PATH} key={i} className={css.skillDetailsIcon} />)}
+                {Array.from({ length: skill.numCoins }, (_, i) => <img src={COIN_ICON_PATH} key={i} className={css.skillDetailsIcon} alt=""/>)}
                 {skill.offenseLevel !== undefined ? [<img src={OFFENSE_LEVEL_ICON_PATH} alt="Offense Level" className={css.skillDetailsIcon} />, <span>{addPlusIfNonnegative(skill.offenseLevel)}</span>] : null}
                 {skill.defenseLevel !== undefined ? [<img src={DEFENSE_LEVEL_ICON_PATH} alt="Defense Level" className={css.skillDetailsIcon} />, <span>{addPlusIfNonnegative(skill.defenseLevel)}</span>] : null}
                 <span className={css.skillAtkWeight}>
@@ -172,23 +172,26 @@ function getSkillSummary(skill: skill, withConditionals: boolean = false, passiv
     let damage: number = 0;
     let power = skill.basePower + powerBonus;
     let reuse = -1;
+
+    const processCoinEffects = (ee: eventEffect, coinSummary: { [key: string]: summaryBlob }) => {
+        let eeSummary = getEventEffectSummary(ee, withConditionals, false, null, reuse >= 0);
+        let keys = new Set([...Object.keys(coinSummary), ...Object.keys(eeSummary)]);
+        keys.forEach(key => {
+            if (key in eeSummary && key in passiveBonuses) {
+                eeSummary[key] = addSummaryBlobs(eeSummary[key], passiveBonuses[key]);
+            }
+            if (key in coinSummary && key in eeSummary) {
+                coinSummary[key] = addSummaryBlobs(coinSummary[key], eeSummary[key]);
+            } else if (key in eeSummary) {
+                coinSummary[key] = {...eeSummary[key]};
+            }
+        });
+    };
+
     for (let i = 0; i < skill.numCoins; i++) {
         let coinSummary: { [key: string]: summaryBlob } = {};
         if (skill.coinEffects) {
-            skill.coinEffects[i].forEach(ee => {
-                let eeSummary = getEventEffectSummary(ee, withConditionals, false, null, reuse >= 0);
-                let keys = new Set([...Object.keys(coinSummary), ...Object.keys(eeSummary)]);
-                keys.forEach(key => {
-                    if (key in eeSummary && key in passiveBonuses) {
-                        eeSummary[key] = addSummaryBlobs(eeSummary[key], passiveBonuses[key]);
-                    }
-                    if (key in coinSummary && key in eeSummary) {
-                        coinSummary[key] = addSummaryBlobs(coinSummary[key], eeSummary[key]);
-                    } else if (key in eeSummary) {
-                        coinSummary[key] = {...eeSummary[key]};
-                    }
-                });
-            });
+            skill.coinEffects[i].forEach(ee => processCoinEffects(ee, coinSummary));
         }
         Object.keys(passiveBonusesAlways).forEach(key => {
             if (key in coinSummary) {
@@ -209,13 +212,13 @@ function getSkillSummary(skill: skill, withConditionals: boolean = false, passiv
             damage += power * (1 + damageBonus / 100);
         }
 
-        if("reuseCoin" in coinSummary && reuse == -1) {
+        if("reuseCoin" in coinSummary && reuse === -1) {
             reuse = coinSummary["reuseCoin"].value ?? -1;
             delete coinSummary["reuseCoin"];
         }
-        if(reuse == 0) reuse = -1;
+        if(reuse === 0) reuse = -1;
 
-        if(reuse != -1) {
+        if(reuse !== -1) {
             i -= 1;
             reuse -= 1;
         }
@@ -235,7 +238,7 @@ function getSkillSummary(skill: skill, withConditionals: boolean = false, passiv
         });
     }
 
-    if (skill.defendType && (skill.defendType == "guard" || skill.defendType == "evade")) {
+    if (skill.defendType && (skill.defendType === "guard" || skill.defendType === "evade")) {
         damage = 0;
     }
 

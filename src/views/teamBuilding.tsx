@@ -7,7 +7,6 @@ import { Status, getStatusParentFromId } from "components/status";
 import { addSummaryBlobs, SummaryBlob, summaryBlob } from "components/summaryBlob";
 import css from "./teamBuilding.module.css";
 import Select from "react-select";
-import { ids } from "webpack";
 
 type SinnerPanelProps = {
     sinner: number,
@@ -26,18 +25,17 @@ function SinnerPanel({ sinner, selectedIds, setSelectedIds, deploymentOrder, set
         else newIds[sinner - 1] = "";
 
         setSelectedIds(newIds);
-        if (deploymentOrder.includes(sinner)) setDeploymentOrder(deploymentOrder.filter(x => { return x != sinner; }));
+        if (deploymentOrder.includes(sinner)) setDeploymentOrder(deploymentOrder.filter(x => { return x !== sinner; }));
     }
 
     const handleDeploy = () => {
-        if (deploymentOrder.includes(sinner)) setDeploymentOrder(deploymentOrder.filter(x => { return x != sinner; }));
+        if (deploymentOrder.includes(sinner)) setDeploymentOrder(deploymentOrder.filter(x => { return x !== sinner; }));
         else setDeploymentOrder([...deploymentOrder, sinner]);
     }
 
     return <div className={css.sinnerPanel}>
         <Select options={idOptions} className={css.dropdown} isClearable={true} onChange={handleChange}></Select>
-        {selectedIds[sinner - 1] ? <img src={getIdPortraitPath(identities[selectedIds[sinner - 1]])} className={deploymentOrder.includes(sinner) ? css.deployedPortrait : css.portrait} onClick={handleDeploy}></img> : null}
-
+        {selectedIds[sinner - 1] ? <img src={getIdPortraitPath(identities[selectedIds[sinner - 1]])} className={deploymentOrder.includes(sinner) ? css.deployedPortrait : css.portrait} onClick={handleDeploy} alt=""/> : null}
     </div>
 }
 
@@ -147,7 +145,7 @@ function TeamSummaryTable({ selectedIds, deploymentOrder, isConditionalsOn, isPa
     let damageSum = 0;
 
     let statusSet = new Set<string>();
-    idSummaries.forEach(({ status: status }) => {
+    idSummaries.forEach(({ status }) => {
         Object.keys(status).forEach(key => {
             if (!isNaN(Number(key))) { statusSet.add(key); }
         });
@@ -157,7 +155,7 @@ function TeamSummaryTable({ selectedIds, deploymentOrder, isConditionalsOn, isPa
         let aparent = getStatusParentFromId(a);
         let bparent = getStatusParentFromId(b);
         if (aparent && bparent) {
-            if (aparent == bparent) return Number(a) - Number(b);
+            if (aparent === bparent) return Number(a) - Number(b);
             else return Number(aparent) - Number(bparent);
         } else {
             return Number(aparent ?? a) - Number(bparent ?? b);
@@ -172,7 +170,7 @@ function TeamSummaryTable({ selectedIds, deploymentOrder, isConditionalsOn, isPa
 
     for (let i = 0; i < idSummaries.length; i++) {
         let moveCount = Math.floor(deploymentSlots / idSummaries.length) + (i < deploymentSlots % idSummaries.length ? 1 : 0);
-        headerRow.push(<th><img src={getIdPortraitPath(identities[idSummaries[i].id])} className={css.summaryPortrait} /> x{moveCount}</th>);
+        headerRow.push(<th><img src={getIdPortraitPath(identities[idSummaries[i].id])} className={css.summaryPortrait} alt="" /> x{moveCount}</th>);
         clashSum += idSummaries[i].clash * moveCount;
         clashRow.push(<td>{idSummaries[i].clash.toFixed(2)}</td>);
         damageSum += idSummaries[i].damage * moveCount;

@@ -195,12 +195,10 @@ function StatusRow({ status, skills, skillSummaries, passiveSummaries }: summari
     }
     cells.push(<td><AverageSummaryBlob summaryBlob={sumBlob} count={count} /></td>);
     passiveSummaries.forEach(passive => {
-        {
-            if (status in passive.status) {
-                cells.push(<td><SummaryBlob summaryBlob={passive.status[status]} /></td>);
-            } else {
-                cells.push(<td />);
-            }
+        if (status in passive.status) {
+            cells.push(<td><SummaryBlob summaryBlob={passive.status[status]} /></td>);
+        } else {
+            cells.push(<td />);
         }
     });
 
@@ -237,21 +235,21 @@ function SummaryTable({ skills, passives, support, withConditionals = false, wit
     skillSummaries.forEach(skill => {
         Object.keys(skill.status).forEach(key => {
             if (!isNaN(Number(key))) { statusSet.add(key); }
-            if (key == "hp") hpHealing = true;
-            if (key == "lifesteal") lifesteal = true;
-            if (key == "sp") spHealing = true;
-            if (key == "offenseLevel") offenseLevel = true;
-            if (key == "defenseLevel") defenseLevel = true;
+            if (key === "hp") hpHealing = true;
+            if (key === "lifesteal") lifesteal = true;
+            if (key === "sp") spHealing = true;
+            if (key === "offenseLevel") offenseLevel = true;
+            if (key === "defenseLevel") defenseLevel = true;
         });
     });
     passiveSummaries.forEach(passive => {
         Object.keys(passive.status).forEach(key => {
             if (!isNaN(Number(key))) { statusSet.add(key); }
-            if (key == "hp") hpHealing = true;
-            if (key == "lifesteal") lifesteal = true;
-            if (key == "sp") spHealing = true;
-            if (key == "offenseLevel") offenseLevel = true;
-            if (key == "defenseLevel") defenseLevel = true;
+            if (key === "hp") hpHealing = true;
+            if (key === "lifesteal") lifesteal = true;
+            if (key === "sp") spHealing = true;
+            if (key === "offenseLevel") offenseLevel = true;
+            if (key === "defenseLevel") defenseLevel = true;
         });
     });
     let statusList = Array.from(statusSet).sort(function (a, b) {
@@ -259,7 +257,7 @@ function SummaryTable({ skills, passives, support, withConditionals = false, wit
         let aparent = getStatusParentFromId(a);
         let bparent = getStatusParentFromId(b);
         if(aparent && bparent) {
-            if(aparent == bparent) return Number(a) - Number(b);
+            if(aparent === bparent) return Number(a) - Number(b);
             else return Number(aparent) - Number(bparent);
         } else {
             return Number(aparent ?? a) - Number(bparent ?? b);

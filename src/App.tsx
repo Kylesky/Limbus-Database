@@ -13,12 +13,12 @@ function App() {
     return (
         <div className={css.App}>
             <header className={css.AppHeader}>
-                <span className={css.headerLink} onClick={() => {if(page == 1) setId(""); else setPage(1);}}>Identities List</span>
+                <span className={css.headerLink} onClick={() => {if(page === 1) setId(""); else setPage(1);}}>Identities List</span>
                 <span className={css.headerLink} onClick={() => {setPage(2);}}>Team Building</span>
             </header>
             <div className={css.AppContent}>
-                {page == 1 ? (id == "" ? <IdentityList setIdFunction={setId} /> : <IdentityView identity={identities[id]} />) : null}
-                {page == 2 ? <TeamBuilding /> : null}
+                {page === 1 ? (id === "" ? <IdentityList setIdFunction={setId} /> : <IdentityView identity={identities[id]} />) : null}
+                {page === 2 ? <TeamBuilding /> : null}
             </div>
         </div>
     );

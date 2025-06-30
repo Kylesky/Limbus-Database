@@ -63,10 +63,10 @@ function Status({ status, includeText=true }: StatusProps) {
     }
     return (
         <span>
-            <a data-tooltip-id={status.id} className={css.status}>
+            <span data-tooltip-id={status.id} className={css.status}>
                 <img src={process.env.PUBLIC_URL + template.img} alt={template.name} />
                 {includeText ? <span className={statusTypeClass(template.type)}>{template.name}</span> : null}
-            </a>
+            </span>
             <Tooltip id={status.id} className={css.statusTooltip}>
                 <div className={css.statusHeader}>
                     <img src={process.env.PUBLIC_URL + template.img} alt={template.name} />

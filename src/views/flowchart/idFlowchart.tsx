@@ -7,15 +7,13 @@ import {
     useEdgesState,
     useReactFlow,
     useNodesInitialized,
-    Background,
-    BackgroundVariant,
     MarkerType
 } from '@xyflow/react';
 import { identity } from "items/identity";
 import CustomEdge from './CustomEdge';
 import CustomNode from './CustomNode';
 import {nodeType} from "./CustomNode";
-import css from "./idFlowchart.module.css";
+// import css from "./idFlowchart.module.css";
 
 import '@xyflow/react/dist/style.css';
 
@@ -102,7 +100,7 @@ function IdFlowchartInner({ item }: SummaryFlowchartProps) {
             fitView();
             effectExecuted.current = true;
         }
-    }, [nodesInitialized]);
+    }, [nodesInitialized, edges, fitView, nodes, setEdges, setNodes]);
 
     if (!item.flowChart) return null;
 

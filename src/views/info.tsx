@@ -8,8 +8,15 @@ type infoProps = {
 
 const LEVEL="55";
 
+function computeHp(formula: string) {
+    let tokens = formula.split("+");
+    let base = Number(tokens[0]);
+    tokens = tokens[1].substring(1, tokens[1].length-1).split("*");
+    return Math.floor(base + (Number(tokens[0]) * Number(LEVEL)));
+}
+
 function Info({item}: infoProps) {
-    let hp = Math.floor(eval(item.hp.replace("L", LEVEL)));
+    let hp = computeHp(item.hp);
     return <div className={css.info}>
         <img className={css.portrait} src={getIdPortraitPath(item)} alt={item.name} />
         <div className={css.infoRow}>

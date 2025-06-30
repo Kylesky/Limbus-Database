@@ -10,7 +10,7 @@ type CoinProps = {
 }
 
 function Coin({coinEffects, number}: CoinProps) {
-    if(coinEffects.length == 0){
+    if(coinEffects.length === 0){
         return null;
     }
     

@@ -13,7 +13,7 @@ function prepareTags(tags: string[]){
         if(i > 0) {
             textPieces.push(<span className="tag-separator">, </span>);
         }
-        textPieces.push(<a className="tag">{tags[i]}</a>);
+        textPieces.push(<span className="tag">{tags[i]}</span>);
     }
     return textPieces;
 

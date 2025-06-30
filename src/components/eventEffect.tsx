@@ -87,7 +87,7 @@ function getEventEffectSummary(eventEffect: eventEffect, withConditionals: boole
             let eeSummary = getEventEffectSummary(ee, withConditionals, withPassives);
             let keys = new Set([...Object.keys(result), ...Object.keys(eeSummary)]);
             keys.forEach(key => {
-                if(key == "retrigger"){
+                if(key === "retrigger"){
                     Object.keys(result).forEach(resultKey => {
                         result[resultKey] = addSummaryBlobs(result[resultKey], eeSummary[key]);
                     });

@@ -67,7 +67,7 @@ function addSummaryBlobs(a: summaryBlob, b: summaryBlob, num: number = 1): summa
 function insertIntoSummaryBlob(tokens: string[], blob?: summaryBlob): summaryBlob {
     if (!blob) blob = {};
 
-    let mods, id, num, str;
+    let mods, num, str;
     switch (tokens[0]) {
         case "status":
             mods = new Set<string>(tokens.splice(3));
@@ -122,7 +122,7 @@ function insertIntoSummaryBlob(tokens: string[], blob?: summaryBlob): summaryBlo
             blob.valuePercent = Number(tokens[1].slice(0, tokens[1].length - 1));
             break;
         case "damage":
-            if (tokens[1].charAt(tokens[1].length - 1) == "%") {
+            if (tokens[1].charAt(tokens[1].length - 1) === "%") {
                 blob.valuePercent = Number(tokens[1].slice(0, tokens[1].length - 1));
             } else {
                 blob.value = Number(tokens[1]);
@@ -163,15 +163,15 @@ function SummaryBlob({ summaryBlob }: summaryBlobProps): React.ReactElement {
     let items: React.ReactElement[] = []
     if (summaryBlob.trigger) {
         if(summaryBlob.value){
-            if (summaryBlob.value && summaryBlob.value%1 != 0) summaryBlob.value = Number(summaryBlob.value.toFixed(2));
+            if (summaryBlob.value && summaryBlob.value%1 !== 0) summaryBlob.value = Number(summaryBlob.value.toFixed(2));
             items.push(<div>Yes x{summaryBlob.value}</div>);
         } else {
             items.push(<div>Yes</div>);
         }
     } else {
         if (summaryBlob.potency || summaryBlob.count) {
-            if (summaryBlob.potency && summaryBlob.potency%1 != 0) summaryBlob.potency = Number(summaryBlob.potency.toFixed(2));
-            if (summaryBlob.count && summaryBlob.count%1 != 0) summaryBlob.count = Number(summaryBlob.count.toFixed(2));
+            if (summaryBlob.potency && summaryBlob.potency%1 !== 0) summaryBlob.potency = Number(summaryBlob.potency.toFixed(2));
+            if (summaryBlob.count && summaryBlob.count%1 !== 0) summaryBlob.count = Number(summaryBlob.count.toFixed(2));
 
             if (summaryBlob.withCount) {
                 items.push(<div>{summaryBlob.potency ?? 0}/{summaryBlob.count ?? 0}</div>);
@@ -180,7 +180,7 @@ function SummaryBlob({ summaryBlob }: summaryBlobProps): React.ReactElement {
             }
         }
         if (summaryBlob.value || summaryBlob.valuePercent) {
-            if (summaryBlob.value && summaryBlob.value%1 != 0) summaryBlob.value = Number(summaryBlob.value.toFixed(2));
+            if (summaryBlob.value && summaryBlob.value%1 !== 0) summaryBlob.value = Number(summaryBlob.value.toFixed(2));
 
             if (!summaryBlob.value) {
                 items.push(<div>{summaryBlob.valuePercent}%</div>);
@@ -194,8 +194,8 @@ function SummaryBlob({ summaryBlob }: summaryBlobProps): React.ReactElement {
         }
     }
     if (summaryBlob.selfPotency || summaryBlob.selfCount) {
-        if (summaryBlob.selfPotency && summaryBlob.selfPotency%1 != 0) summaryBlob.selfPotency = Number(summaryBlob.selfPotency.toFixed(2));
-        if (summaryBlob.selfCount && summaryBlob.selfCount%1 != 0) summaryBlob.selfCount = Number(summaryBlob.selfCount.toFixed(2));
+        if (summaryBlob.selfPotency && summaryBlob.selfPotency%1 !== 0) summaryBlob.selfPotency = Number(summaryBlob.selfPotency.toFixed(2));
+        if (summaryBlob.selfCount && summaryBlob.selfCount%1 !== 0) summaryBlob.selfCount = Number(summaryBlob.selfCount.toFixed(2));
 
         if (summaryBlob.withCount) {
             items.push(<div>self {summaryBlob.selfPotency ?? 0}/{summaryBlob.selfCount ?? 0}</div>);
