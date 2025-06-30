@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Limbus-Database/static/css/main.654ac90f.css",
-    "main.js": "/Limbus-Database/static/js/main.898e6183.js",
+    "main.js": "/Limbus-Database/static/js/main.cd42b49b.js",
     "static/js/453.a79b62c1.chunk.js": "/Limbus-Database/static/js/453.a79b62c1.chunk.js",
     "index.html": "/Limbus-Database/index.html",
     "main.654ac90f.css.map": "/Limbus-Database/static/css/main.654ac90f.css.map",
-    "main.898e6183.js.map": "/Limbus-Database/static/js/main.898e6183.js.map",
+    "main.cd42b49b.js.map": "/Limbus-Database/static/js/main.cd42b49b.js.map",
     "453.a79b62c1.chunk.js.map": "/Limbus-Database/static/js/453.a79b62c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.654ac90f.css",
-    "static/js/main.898e6183.js"
+    "static/js/main.cd42b49b.js"
   ]
 }
